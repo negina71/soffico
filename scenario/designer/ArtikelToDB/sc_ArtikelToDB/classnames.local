@@ -1,0 +1,11 @@
+emds.epi.decl.modell.Group
+emds.epi.decl.modell.InternalMessageMapping
+emds.epi.decl.modell.MessageType
+emds.epi.decl.modell.ServiceInterface
+emds.epi.decl.modell.TestEnvironment
+emds.epi.decl.modell.XMLSchema
+emds.epi.decl.modell.process.ProcessModell
+emds.epi.decl.server.landscape.entries.DatabaseEnvironmentEntry
+emds.epi.decl.server.landscape.entries.FileEnvironmentEntry
+emds.epi.impl.adapter.database.boadapter.BoDatabaseTargetConfig
+emds.epi.impl.adapter.file.FileListenerConfig

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="no"?><mapping xmlns="http://www.emds-ag.de/namespace/" xmlns:emds="http://www.emds-ag.de/namespace/" xmlns:src="http://www.emds-ag.de/namespace/" importRevision="0" name="mm_artikelToDB" scheduling="ser" sourceRef="9c2019c0-9ea9-41c8-8e33-9db9bf08069c:MessageType:26" targetRef="9c2019c0-9ea9-41c8-8e33-9db9bf08069c:MessageType:33" transactionOnRootLevel="0" xsiSupport="false">
+
+  <source name="Artikel">
+    <xsd:schema xmlns:ns1="Artikel" xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="Artikel">
+      <xsd:element id="se1" name="Artikel">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element id="se2" maxOccurs="unbounded" name="ARTIKELDB">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element id="se3" name="ARTIKEL_BEZ" type="xsd:string" xsitype="{http://www.w3.org/2001/XMLSchema}string"/>
+                  <xsd:element id="se4" name="ARTIKELNAME" type="xsd:string" xsitype="{http://www.w3.org/2001/XMLSchema}string"/>
+                  <xsd:element id="se5" name="HERSTELLER" type="xsd:string" xsitype="{http://www.w3.org/2001/XMLSchema}string"/>
+                  <xsd:element id="se6" name="PREIS" type="xsd:float" xsitype="{http://www.w3.org/2001/XMLSchema}float"/>
+                  <xsd:element id="se7" name="MENGE" type="xsd:int" xsitype="{http://www.w3.org/2001/XMLSchema}int"/>
+                  <xsd:element id="se8" name="Lagerposition" type="xsd:int" xsitype="{http://www.w3.org/2001/XMLSchema}int"/>
+                  <xsd:element id="se9" name="verpackt" type="xsd:boolean" xsitype="{http://www.w3.org/2001/XMLSchema}boolean"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+  </source>
+
+  <target name="mt_Database">
+    <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <xsd:element id="te1" name="mt_Database">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element id="te2" maxOccurs="unbounded" minOccurs="0" name="artikel">
+              <xsd:annotation>
+                <xsd:appinfo source="emdsorch:tablename">artikel</xsd:appinfo>
+              </xsd:annotation>
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element id="te3" name="ARTIKEL_ID">
+                    <xsd:annotation>
+                      <xsd:appinfo source="emdsorch:columnname">ARTIKEL_ID</xsd:appinfo>
+                      <xsd:appinfo source="emdsorch:dbtypename">VARCHAR</xsd:appinfo>
+                    </xsd:annotation>
+                    <xsd:simpleType>
+                      <xsd:restriction base="xsd:string">
+                        <xsd:maxLength value="20"/>
+                      </xsd:restriction>
+                    </xsd:simpleType>
+                  </xsd:element>
+                  <xsd:element id="te4" name="ARTIKELNAME">
+                    <xsd:annotation>
+                      <xsd:appinfo source="emdsorch:columnname">ARTIKELNAME</xsd:appinfo>
+                      <xsd:appinfo source="emdsorch:dbtypename">VARCHAR</xsd:appinfo>
+                    </xsd:annotation>
+                    <xsd:simpleType>
+                      <xsd:restriction base="xsd:string">
+                        <xsd:maxLength value="30"/>
+                      </xsd:restriction>
+                    </xsd:simpleType>
+                  </xsd:element>
+                  <xsd:element id="te5" name="HERSTELLER">
+                    <xsd:annotation>
+                      <xsd:appinfo source="emdsorch:columnname">HERSTELLER</xsd:appinfo>
+                      <xsd:appinfo source="emdsorch:dbtypename">VARCHAR</xsd:appinfo>
+                    </xsd:annotation>
+                    <xsd:simpleType>
+                      <xsd:restriction base="xsd:string">
+                        <xsd:maxLength value="10"/>
+                      </xsd:restriction>
+                    </xsd:simpleType>
+                  </xsd:element>
+                  <xsd:element id="te6" name="PREIS" type="xsd:double" xsitype="{http://www.w3.org/2001/XMLSchema}double">
+                    <xsd:annotation>
+                      <xsd:appinfo source="emdsorch:columnname">PREIS</xsd:appinfo>
+                      <xsd:appinfo source="emdsorch:dbtypename">DECIMAL</xsd:appinfo>
+                    </xsd:annotation>
+                  </xsd:element>
+                  <xsd:element id="te7" name="MENGE">
+                    <xsd:annotation>
+                      <xsd:appinfo source="emdsorch:columnname">MENGE</xsd:appinfo>
+                      <xsd:appinfo source="emdsorch:dbtypename">INT</xsd:appinfo>
+                    </xsd:annotation>
+                    <xsd:simpleType>
+                      <xsd:restriction base="xsd:long">
+                        <xsd:totalDigits value="10"/>
+                      </xsd:restriction>
+                    </xsd:simpleType>
+                  </xsd:element>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+  </target>
+
+    <model>
+
+      <nodeMapping id="nm1" sourceNodeType="se2" targetNodeType="te2">
+        <map destAttr="te4" sourceAttr="se4"/>
+        <map destAttr="te3" sourceAttr="se3"/>
+        <map destAttr="te5" sourceAttr="se5"/>
+        <map destAttr="te6" sourceAttr="se6"/>
+        <map destAttr="te7" sourceAttr="se7"/>
+      </nodeMapping>
+
+    </model>
+
+    <graph>
+      <typetree side="left" xpos="20" ypos="20"/>
+      <typetree side="right" xpos="900" ypos="20"/>
+    </graph>
+
+  </mapping>

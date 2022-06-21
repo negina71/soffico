@@ -1,0 +1,53 @@
+<FileListenerConfig id="1">
+  <name>ch_FileListener</name>
+  <description>read xml file</description>
+  <processSenarioID>9c2019c0-9ea9-41c8-8e33-9db9bf08069c</processSenarioID>
+  <ID>29</ID>
+  <revisionNumber>1655830097908</revisionNumber>
+  <groupId>6</groupId>
+  <autoDeleteFlag>false</autoDeleteFlag>
+  <importRevision>0</importRevision>
+  <channelTypeName>File.Inbound</channelTypeName>
+  <numberOfInstances>1</numberOfInstances>
+  <defaultOperation id="2">9c2019c0-9ea9-41c8-8e33-9db9bf08069c:ServiceInterface:30</defaultOperation>
+  <interfaceOperations id="3">
+    <emds.epi.decl.modell.Reference reference="2"/>
+  </interfaceOperations>
+  <isJunoChannel>false</isJunoChannel>
+  <messageDeserializerConfig class="emds.epi.impl.adapter.stream.BinaryDeSerializerConfig" id="4">
+    <serializerTypeName>in.binary</serializerTypeName>
+    <parseMode>0</parseMode>
+  </messageDeserializerConfig>
+  <inboundSteps id="5"/>
+  <outboundSteps id="6"/>
+  <workSuffix>wrk</workSuffix>
+  <checkForWorkFilesOnStartup>false</checkForWorkFilesOnStartup>
+  <pattern>(.*).xml$</pattern>
+  <simplePattern>false</simplePattern>
+  <pollingDuration id="7">
+    <unit>SECOND</unit>
+    <value>10</value>
+  </pollingDuration>
+  <pollingPeriod>1000</pollingPeriod>
+  <timing class="emds.epi.decl.server.timer.PeriodicallyTimer" id="8">
+    <description>PeriodicallyTiming</description>
+    <preserveEvents>false</preserveEvents>
+    <dayMask>255</dayMask>
+    <repeatCount>-1</repeatCount>
+    <repeatInterval reference="7"/>
+  </timing>
+  <sortFunction></sortFunction>
+  <descending>false</descending>
+  <sortMode>0</sortMode>
+  <directoryRef id="9">9c2019c0-9ea9-41c8-8e33-9db9bf08069c:EnvironmentEntry:25</directoryRef>
+  <processAction>0</processAction>
+  <okSuffix>ok</okSuffix>
+  <errProcessAction>0</errProcessAction>
+  <errorSuffix>err</errorSuffix>
+  <returnBinaryContent>false</returnBinaryContent>
+  <synchronousDelivery>false</synchronousDelivery>
+  <cleanupDuration id="10">
+    <unit>SECOND</unit>
+    <value>1</value>
+  </cleanupDuration>
+</FileListenerConfig>

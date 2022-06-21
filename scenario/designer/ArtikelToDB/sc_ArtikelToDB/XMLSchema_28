@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='ISO-8859-1'?>
+
+  <schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="Artikel" elementFormDefault="qualified">
+    <xsd:element name="Artikel">
+      <xsd:complexType>
+        <xsd:sequence>
+          <xsd:element name="ARTIKELDB" minOccurs="0" maxOccurs="unbounded">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="ARTIKEL_BEZ" type="xsd:string"></xsd:element>
+                <xsd:element name="ARTIKELNAME" minOccurs="0" type="xsd:string"></xsd:element>
+                <xsd:element name="HERSTELLER" minOccurs="0" type="xsd:string"></xsd:element>
+                <xsd:element name="PREIS" minOccurs="0" type="xsd:decimal"></xsd:element>
+                <xsd:element name="MENGE" minOccurs="0" type="xsd:long"></xsd:element>
+                <xsd:element name="Lagerposition" minOccurs="0" type="xsd:string"></xsd:element>
+                <xsd:element name="verpackt" minOccurs="0" type="xsd:boolean"></xsd:element>
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+    </xsd:element>
+  </schema>

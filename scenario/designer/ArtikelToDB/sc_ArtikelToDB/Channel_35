@@ -1,0 +1,52 @@
+<emds.epi.impl.adapter.database.boadapter.BoDatabaseTargetConfig id="1">
+  <name>ch_WriteToDB</name>
+  <description></description>
+  <processSenarioID>9c2019c0-9ea9-41c8-8e33-9db9bf08069c</processSenarioID>
+  <ID>35</ID>
+  <revisionNumber>1655840954549</revisionNumber>
+  <groupId>6</groupId>
+  <autoDeleteFlag>false</autoDeleteFlag>
+  <importRevision>0</importRevision>
+  <channelTypeName>BusinessObjects.Target</channelTypeName>
+  <numberOfInstances>1</numberOfInstances>
+  <defaultOperation id="2">9c2019c0-9ea9-41c8-8e33-9db9bf08069c:ServiceInterface:36</defaultOperation>
+  <interfaceOperations id="3">
+    <emds.epi.decl.modell.Reference reference="2"/>
+  </interfaceOperations>
+  <isJunoChannel>false</isJunoChannel>
+  <databaseReference id="4">9c2019c0-9ea9-41c8-8e33-9db9bf08069c:EnvironmentEntry:32</databaseReference>
+  <targetType id="5">9c2019c0-9ea9-41c8-8e33-9db9bf08069c:MessageType:33</targetType>
+  <scripts id="6"/>
+  <mappingModes id="7">
+    <entry>
+      <string>e1</string>
+      <emds.epi.impl.adapter.database.boadapter.MappingMode>INSERT</emds.epi.impl.adapter.database.boadapter.MappingMode>
+    </entry>
+    <entry>
+      <string>e2</string>
+      <emds.epi.impl.adapter.database.boadapter.MappingMode>INSERT</emds.epi.impl.adapter.database.boadapter.MappingMode>
+    </entry>
+  </mappingModes>
+  <usedKeys id="8">
+    <entry>
+      <string>e2</string>
+      <string>DefaultKey</string>
+    </entry>
+  </usedKeys>
+  <processingProps id="9">
+    <entry>
+      <string>e2</string>
+      <emds.epi.impl.adapter.database.boadapter.ProcessingProps id="10">
+        <preferMappingKey>false</preferMappingKey>
+        <writeNulls>true</writeNulls>
+      </emds.epi.impl.adapter.database.boadapter.ProcessingProps>
+    </entry>
+  </processingProps>
+  <defaultIdGenMethod>MaxId</defaultIdGenMethod>
+  <noResultMsg>true</noResultMsg>
+  <maxErrCount>0</maxErrCount>
+  <useBatchMode>false</useBatchMode>
+  <noConverters>true</noConverters>
+  <overrideBatchCount>true</overrideBatchCount>
+  <maxBatchCount>100</maxBatchCount>
+</emds.epi.impl.adapter.database.boadapter.BoDatabaseTargetConfig>

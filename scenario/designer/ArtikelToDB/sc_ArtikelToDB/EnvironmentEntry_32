@@ -1,0 +1,42 @@
+<emds.epi.decl.server.landscape.entries.DatabaseEnvironmentEntry id="1">
+  <name>ee_MariaDB</name>
+  <description></description>
+  <processSenarioID>9c2019c0-9ea9-41c8-8e33-9db9bf08069c</processSenarioID>
+  <ID>32</ID>
+  <revisionNumber>1655834761715</revisionNumber>
+  <groupId>9</groupId>
+  <autoDeleteFlag>false</autoDeleteFlag>
+  <importRevision>0</importRevision>
+  <entryTypeName>database connection</entryTypeName>
+  <isOriginal>true</isOriginal>
+  <useRuntimeLink>false</useRuntimeLink>
+  <jdbcurl>jdbc:mariadb://localhost:3306/test?serverTimezone=UTC</jdbcurl>
+  <jdbcdriver>org.mariadb.jdbc.Driver</jdbcdriver>
+  <user>ORCHESTRA</user>
+  <encryptedPwd>jksrxur/t1qdqJekeOLoqxf46yIz5ae6F/vAmu1aGluZ2R0=</encryptedPwd>
+  <schema>test</schema>
+  <xadriver>emds.driver.jdbc.XANotSupported</xadriver>
+  <driverScopeScenario>false</driverScopeScenario>
+  <additionProperties id="2">
+    <entry>
+      <string>c3p0.acquireRetryAttempts</string>
+      <string>30</string>
+    </entry>
+    <entry>
+      <string>c3p0.checkoutTimeout</string>
+      <string>120000</string>
+    </entry>
+    <entry>
+      <string>c3p0.acquireRetryDelay</string>
+      <string>1000</string>
+    </entry>
+    <entry>
+      <string>c3p0.acquireIncrement</string>
+      <string>3</string>
+    </entry>
+  </additionProperties>
+  <loginTimeout id="3">
+    <unit>SECOND</unit>
+    <value>0</value>
+  </loginTimeout>
+</emds.epi.decl.server.landscape.entries.DatabaseEnvironmentEntry>

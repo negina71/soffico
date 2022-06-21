@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+  <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:emds="http://www.emds-ag.de/namespace/" elementFormDefault="unqualified" emds:messageFormat="CSV">
+    <xsd:element name="mt_Database" id="e1">
+      <xsd:complexType>
+        <xsd:sequence>
+          <xsd:element name="artikel" minOccurs="0" maxOccurs="unbounded" id="e2">
+            <xsd:annotation>
+              <xsd:appinfo source="emdsorch:tablename">artikel</xsd:appinfo>
+            </xsd:annotation>
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="ARTIKEL_ID" id="e3">
+                  <xsd:annotation>
+                    <xsd:appinfo source="emdsorch:columnname">ARTIKEL_ID</xsd:appinfo>
+                    <xsd:appinfo source="emdsorch:dbtypename">VARCHAR</xsd:appinfo>
+                  </xsd:annotation>
+                  <xsd:simpleType>
+                    <xsd:restriction base="xsd:string">
+                      <xsd:maxLength value="20"></xsd:maxLength>
+                    </xsd:restriction>
+                  </xsd:simpleType>
+                </xsd:element>
+                <xsd:element name="ARTIKELNAME" id="e4">
+                  <xsd:annotation>
+                    <xsd:appinfo source="emdsorch:columnname">ARTIKELNAME</xsd:appinfo>
+                    <xsd:appinfo source="emdsorch:dbtypename">VARCHAR</xsd:appinfo>
+                  </xsd:annotation>
+                  <xsd:simpleType>
+                    <xsd:restriction base="xsd:string">
+                      <xsd:maxLength value="30"></xsd:maxLength>
+                    </xsd:restriction>
+                  </xsd:simpleType>
+                </xsd:element>
+                <xsd:element name="HERSTELLER" id="e5">
+                  <xsd:annotation>
+                    <xsd:appinfo source="emdsorch:columnname">HERSTELLER</xsd:appinfo>
+                    <xsd:appinfo source="emdsorch:dbtypename">VARCHAR</xsd:appinfo>
+                  </xsd:annotation>
+                  <xsd:simpleType>
+                    <xsd:restriction base="xsd:string">
+                      <xsd:maxLength value="10"></xsd:maxLength>
+                    </xsd:restriction>
+                  </xsd:simpleType>
+                </xsd:element>
+                <xsd:element name="PREIS" id="e6" type="xsd:double">
+                  <xsd:annotation>
+                    <xsd:appinfo source="emdsorch:columnname">PREIS</xsd:appinfo>
+                    <xsd:appinfo source="emdsorch:dbtypename">DECIMAL</xsd:appinfo>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element name="MENGE" id="e7">
+                  <xsd:annotation>
+                    <xsd:appinfo source="emdsorch:columnname">MENGE</xsd:appinfo>
+                    <xsd:appinfo source="emdsorch:dbtypename">INT</xsd:appinfo>
+                  </xsd:annotation>
+                  <xsd:simpleType>
+                    <xsd:restriction base="xsd:long">
+                      <xsd:totalDigits value="10"></xsd:totalDigits>
+                    </xsd:restriction>
+                  </xsd:simpleType>
+                </xsd:element>
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:key name="DefaultKey" id="k8">
+        <xsd:selector xpath="artikel"></xsd:selector>
+        <xsd:field xpath="ARTIKEL_ID"></xsd:field>
+      </xsd:key>
+    </xsd:element>
+  </xsd:schema>

@@ -1,0 +1,26 @@
+<emds.epi.decl.modell.ServiceInterface id="1">
+  <name>DEFAULT_INTERFACE</name>
+  <processSenarioID>9c2019c0-9ea9-41c8-8e33-9db9bf08069c</processSenarioID>
+  <ID>36</ID>
+  <revisionNumber>1655840954540</revisionNumber>
+  <groupId>11</groupId>
+  <autoDeleteFlag>false</autoDeleteFlag>
+  <importRevision>0</importRevision>
+  <exchangePattern>REQUEST_RESPONSE</exchangePattern>
+  <parameters id="2">
+    <Property id="3">
+      <name>MSG</name>
+      <type class="ArgumentType">message</type>
+      <usagePattern>INPUT</usagePattern>
+      <description>source message</description>
+      <requiredOnInput>true</requiredOnInput>
+    </Property>
+    <Property id="4">
+      <name>STATE</name>
+      <type class="SimpleType">string</type>
+      <usagePattern>OUTPUT</usagePattern>
+      <description>result state</description>
+      <requiredOnInput>true</requiredOnInput>
+    </Property>
+  </parameters>
+</emds.epi.decl.modell.ServiceInterface>

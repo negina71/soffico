@@ -1,9 +1,9 @@
 # scenario properties
-# Tue Jun 21 16:52:55 CEST 2022
+# Tue Jun 21 18:08:42 CEST 2022
 UUID=9c2019c0-9ea9-41c8-8e33-9db9bf08069c
 charset=ISO-8859-1
 description=
 formatVersion=106
-name=sc_test
+name=sc_ArtikelToDB
 orchestraVersion=4.8.2.5 build number 136
 scenarioType=0
