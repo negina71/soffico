@@ -1,0 +1,10 @@
+<Group id="1">
+  <name>Service Client</name>
+  <processSenarioID>9c2019c0-9ea9-41c8-8e33-9db9bf08069c</processSenarioID>
+  <ID>12</ID>
+  <revisionNumber>0</revisionNumber>
+  <groupId>-1</groupId>
+  <autoDeleteFlag>false</autoDeleteFlag>
+  <importRevision>0</importRevision>
+  <memberTypeName>ServiceDeclaration</memberTypeName>
+</Group>

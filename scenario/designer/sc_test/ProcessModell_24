@@ -1,0 +1,83 @@
+<ProcessModel id="1">
+  <name>pm_test</name>
+  <description></description>
+  <processSenarioID>9c2019c0-9ea9-41c8-8e33-9db9bf08069c</processSenarioID>
+  <ID>24</ID>
+  <revisionNumber>1655823212833</revisionNumber>
+  <groupId>5</groupId>
+  <autoDeleteFlag>false</autoDeleteFlag>
+  <importRevision>0</importRevision>
+  <isPersistent>false</isPersistent>
+  <useRecovery>false</useRecovery>
+  <isMassData>false</isMassData>
+  <isFifo>false</isFifo>
+  <isGroupedFifo>false</isGroupedFifo>
+  <ensureEventFifo>false</ensureEventFifo>
+  <priority>NORMAL</priority>
+  <priorityDerived>false</priorityDerived>
+  <logLevel>0</logLevel>
+  <deleteLog>false</deleteLog>
+  <redeployPolicy>0</redeployPolicy>
+  <volatilePoicy>0</volatilePoicy>
+  <manualRestart>false</manualRestart>
+  <processTyp>0</processTyp>
+  <clusterMode>0</clusterMode>
+  <pipelineMode>false</pipelineMode>
+  <bestEffortLimit>0</bestEffortLimit>
+  <businessKeys id="2"/>
+  <processObjects id="3">
+    <EventStart id="4">
+      <processModel reference="1"/>
+      <id>101</id>
+      <displayText>start</displayText>
+      <inAssignments id="5"/>
+      <outAssignments id="6"/>
+      <xpos>260.0</xpos>
+      <ypos>150.0</ypos>
+      <width>20.0</width>
+      <height>20.0</height>
+    </EventStart>
+    <EventEnd id="7">
+      <processModel reference="1"/>
+      <id>102</id>
+      <displayText>end</displayText>
+      <inAssignments id="8"/>
+      <outAssignments id="9"/>
+      <xpos>390.0</xpos>
+      <ypos>150.0</ypos>
+      <width>20.0</width>
+      <height>20.0</height>
+    </EventEnd>
+  </processObjects>
+  <annotations id="10"/>
+  <edges id="11">
+    <EdgeSequence id="12">
+      <processModel reference="1"/>
+      <id>104</id>
+      <m__arNode id="13">
+        <EventStart reference="4"/>
+        <EventEnd reference="7"/>
+      </m__arNode>
+      <bentStyle>STRAIGHT</bentStyle>
+      <defaultEdge>false</defaultEdge>
+      <showAsEdgeLabel>false</showAsEdgeLabel>
+    </EdgeSequence>
+  </edges>
+  <properties id="14">
+    <Property id="15">
+      <name>CURMSG</name>
+      <type class="ArgumentType">message</type>
+      <usagePattern>INPUT</usagePattern>
+      <description>current message</description>
+      <requiredOnInput>false</requiredOnInput>
+    </Property>
+    <Property id="16">
+      <name>ERROR</name>
+      <type class="ComplexType" id="17">error</type>
+      <usagePattern>LOCAL</usagePattern>
+      <description>Error information object</description>
+      <requiredOnInput>false</requiredOnInput>
+    </Property>
+  </properties>
+  <maxElementId>104</maxElementId>
+</ProcessModel>
