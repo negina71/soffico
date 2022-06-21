@@ -3,7 +3,7 @@
   <description></description>
   <processSenarioID>9c2019c0-9ea9-41c8-8e33-9db9bf08069c</processSenarioID>
   <ID>24</ID>
-  <revisionNumber>1655838615711</revisionNumber>
+  <revisionNumber>1655844035857</revisionNumber>
   <groupId>5</groupId>
   <autoDeleteFlag>false</autoDeleteFlag>
   <importRevision>0</importRevision>
@@ -236,6 +236,7 @@
 /* ***************************************************************************
  * Add your own java code
  * ***************************************************************************/
+
 </script>
       <imports>
 	</imports>
@@ -503,5 +504,5 @@ import emds.epi.impl.messagestore.scriptlet.MessageConverter;
       <requiredOnInput>false</requiredOnInput>
     </Property>
   </properties>
-  <maxElementId>129</maxElementId>
+  <maxElementId>132</maxElementId>
 </ProcessModel>

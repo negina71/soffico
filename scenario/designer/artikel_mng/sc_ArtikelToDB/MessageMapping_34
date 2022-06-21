@@ -97,11 +97,18 @@
     <model>
 
       <nodeMapping id="nm1" sourceNodeType="se2" targetNodeType="te2">
+        <literal id="e1" type="int">0</literal>
+        <literal id="e2" type="int">5</literal>
+        <methodCall id="e3" methodName="substring">
+          <arg sourceAttr="se3"/>
+          <arg sourceExpr="e1"/>
+          <arg sourceExpr="e2"/>
+        </methodCall>
         <map destAttr="te4" sourceAttr="se4"/>
-        <map destAttr="te3" sourceAttr="se3"/>
         <map destAttr="te5" sourceAttr="se5"/>
         <map destAttr="te6" sourceAttr="se6"/>
         <map destAttr="te7" sourceAttr="se7"/>
+        <map destAttr="te3" sourceExpr="e3"/>
       </nodeMapping>
 
     </model>
@@ -109,6 +116,9 @@
     <graph>
       <typetree side="left" xpos="20" ypos="20"/>
       <typetree side="right" xpos="900" ypos="20"/>
+      <loc id="e3" xloc="-1" xpos="434" yloc="-1" ypos="87"/>
+      <loc id="e1" xloc="-1" xpos="293" yloc="-1" ypos="139"/>
+      <loc id="e2" xloc="-1" xpos="302" yloc="-1" ypos="191"/>
     </graph>
 
   </mapping>

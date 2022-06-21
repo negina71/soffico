@@ -1,0 +1,38 @@
+<emds.epi.decl.server.landscape.entries.DatabaseEnvironmentEntry id="1">
+  <name>ee_Database</name>
+  <description></description>
+  <processSenarioID>89d50e8f-8c8a-41d5-b3f6-33b07c8e4327</processSenarioID>
+  <ID>25</ID>
+  <revisionNumber>1655843181931</revisionNumber>
+  <groupId>9</groupId>
+  <autoDeleteFlag>false</autoDeleteFlag>
+  <importRevision>0</importRevision>
+  <entryTypeName>database connection</entryTypeName>
+  <isOriginal>true</isOriginal>
+  <useRuntimeLink>false</useRuntimeLink>
+  <jdbcurl>jdbc:mariadb://localhost:3306/test?serverTimezone=UTC</jdbcurl>
+  <jdbcdriver>org.mariadb.jdbc.Driver</jdbcdriver>
+  <user>ORCHESTRA</user>
+  <encryptedPwd>srjkPL4tsyQxpasUrgmggoX1pkzpFrUVQ/6jrAfizex0B28=</encryptedPwd>
+  <schema>test</schema>
+  <xadriver>emds.driver.jdbc.XANotSupported</xadriver>
+  <driverScopeScenario>false</driverScopeScenario>
+  <additionProperties id="2">
+    <entry>
+      <string>c3p0.acquireRetryAttempts</string>
+      <string>30</string>
+    </entry>
+    <entry>
+      <string>c3p0.acquireRetryDelay</string>
+      <string>1000</string>
+    </entry>
+    <entry>
+      <string>c3p0.acquireIncrement</string>
+      <string>3</string>
+    </entry>
+  </additionProperties>
+  <loginTimeout id="3">
+    <unit>SECOND</unit>
+    <value>0</value>
+  </loginTimeout>
+</emds.epi.decl.server.landscape.entries.DatabaseEnvironmentEntry>

@@ -1,0 +1,35 @@
+<emds.epi.impl.adapter.database.DatabaseReaderConfig id="1">
+  <name>ch_Database_Reader</name>
+  <description></description>
+  <processSenarioID>89d50e8f-8c8a-41d5-b3f6-33b07c8e4327</processSenarioID>
+  <ID>27</ID>
+  <revisionNumber>1655843431241</revisionNumber>
+  <groupId>6</groupId>
+  <autoDeleteFlag>false</autoDeleteFlag>
+  <importRevision>0</importRevision>
+  <channelTypeName>Database.Reader</channelTypeName>
+  <numberOfInstances>1</numberOfInstances>
+  <defaultOperation id="2">89d50e8f-8c8a-41d5-b3f6-33b07c8e4327:ServiceInterface:28</defaultOperation>
+  <interfaceOperations id="3">
+    <emds.epi.decl.modell.Reference reference="2"/>
+  </interfaceOperations>
+  <isJunoChannel>false</isJunoChannel>
+  <databaseReference id="4">89d50e8f-8c8a-41d5-b3f6-33b07c8e4327:EnvironmentEntry:25</databaseReference>
+  <parameters class="linked-list" id="5">
+    <Property id="6">
+      <name>MSG</name>
+      <type class="ArgumentType">message</type>
+      <messageType id="7">89d50e8f-8c8a-41d5-b3f6-33b07c8e4327:MessageType:26</messageType>
+      <usagePattern>OUTPUT</usagePattern>
+      <description>message from database</description>
+      <requiredOnInput>true</requiredOnInput>
+    </Property>
+    <Property id="8">
+      <name>ID</name>
+      <type class="SimpleType">string</type>
+      <messageType id="9">89d50e8f-8c8a-41d5-b3f6-33b07c8e4327:MessageType:24</messageType>
+      <usagePattern>INPUT</usagePattern>
+      <requiredOnInput>false</requiredOnInput>
+    </Property>
+  </parameters>
+</emds.epi.impl.adapter.database.DatabaseReaderConfig>
