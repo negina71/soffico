@@ -25,16 +25,12 @@ These details <em>will</em> remain <strong>hidden</strong> until expanded.
 <summary>sc_File_to_MLLP</summary>
 These details <em>will</em> remain <strong>hidden</strong> until expanded.
 
-![sc_File_to_MLLP](/uploads/cb79f8cd092600260fc96a632b5b4f9c/sc_File_to_MLLP.PNG)
-
 </details>
 </p>
 <p>
 <details>
 <summary>sc_MLLP_to_File</summary>
 These details <em>will</em> remain <strong>hidden</strong> until expanded.
-
-![02_sc_MLLP_to_File](/uploads/16e63ce99d5e749a2f8ce1612dcb4f42/02_sc_MLLP_to_File.PNG)
 
 </details>
 </p>
