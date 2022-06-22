@@ -1,0 +1,26 @@
+<emds.epi.decl.modell.ServiceInterface id="1">
+  <name>DEFAULT_INTERFACE</name>
+  <processSenarioID>88df2f36-c28b-45bb-b6fc-830d4c213f12</processSenarioID>
+  <ID>38</ID>
+  <revisionNumber>1655915874811</revisionNumber>
+  <groupId>11</groupId>
+  <autoDeleteFlag>false</autoDeleteFlag>
+  <importRevision>0</importRevision>
+  <exchangePattern>REQUEST</exchangePattern>
+  <parameters id="2">
+    <Property id="3">
+      <name>FILENAME</name>
+      <type class="SimpleType">string</type>
+      <usagePattern>INPUT</usagePattern>
+      <description>Filename</description>
+      <requiredOnInput>false</requiredOnInput>
+    </Property>
+    <Property id="4">
+      <name>MSG</name>
+      <type class="ArgumentType">message</type>
+      <usagePattern>INPUT</usagePattern>
+      <description>Message to write</description>
+      <requiredOnInput>true</requiredOnInput>
+    </Property>
+  </parameters>
+</emds.epi.decl.modell.ServiceInterface>

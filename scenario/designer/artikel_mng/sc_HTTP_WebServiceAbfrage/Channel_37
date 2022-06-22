@@ -1,0 +1,35 @@
+<FileOutboundConfig id="1">
+  <name>ch_writeCSV</name>
+  <description></description>
+  <processSenarioID>88df2f36-c28b-45bb-b6fc-830d4c213f12</processSenarioID>
+  <ID>37</ID>
+  <revisionNumber>1655915874826</revisionNumber>
+  <groupId>6</groupId>
+  <autoDeleteFlag>false</autoDeleteFlag>
+  <importRevision>0</importRevision>
+  <channelTypeName>File.Outbound</channelTypeName>
+  <numberOfInstances>1</numberOfInstances>
+  <defaultOperation id="2">88df2f36-c28b-45bb-b6fc-830d4c213f12:ServiceInterface:38</defaultOperation>
+  <interfaceOperations id="3">
+    <emds.epi.decl.modell.Reference reference="2"/>
+  </interfaceOperations>
+  <isJunoChannel>false</isJunoChannel>
+  <messageSerializerConfig class="emds.epi.impl.adapter.stream.CSVSerializerConfig" id="4">
+    <serializerTypeName>out.csv</serializerTypeName>
+    <parseMode>0</parseMode>
+    <encoding>ISO-8859-1</encoding>
+    <lineEnd>&#xd;
+</lineEnd>
+    <separator>;</separator>
+    <quotechar></quotechar>
+    <escapechar></escapechar>
+    <firstLine>id;name;manufacture;price;quantity</firstLine>
+  </messageSerializerConfig>
+  <inboundSteps id="5"/>
+  <outboundSteps id="6"/>
+  <directoryRef id="7">88df2f36-c28b-45bb-b6fc-830d4c213f12:EnvironmentEntry:36</directoryRef>
+  <appendMode>0</appendMode>
+  <replaceFileExtension>false</replaceFileExtension>
+  <appendSeparator>false</appendSeparator>
+  <workFileExtension>.tmp</workFileExtension>
+</FileOutboundConfig>
