@@ -9,3 +9,4 @@ emds.epi.decl.server.landscape.entries.DatabaseEnvironmentEntry
 emds.epi.decl.server.landscape.entries.FileEnvironmentEntry
 emds.epi.impl.adapter.database.boadapter.BoDatabaseTargetConfig
 emds.epi.impl.adapter.file.FileListenerConfig
+emds.mapping.proc.MappingScript

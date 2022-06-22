@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+  <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:emds="http://www.emds-ag.de/namespace/" xmlns:ns1="urn:emds:csv" targetNamespace="urn:emds:csv" elementFormDefault="qualified" emds:messageFormat="CSV">
+    <xsd:element name="content" id="e1">
+      <xsd:complexType>
+        <xsd:sequence>
+          <xsd:element name="line" id="e2">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="column0" id="e3" type="xsd:string"></xsd:element>
+                <xsd:element name="column1" id="e4" type="xsd:string"></xsd:element>
+                <xsd:element name="column2" id="e5" type="xsd:string"></xsd:element>
+                <xsd:element name="column3" id="e6" type="xsd:float"></xsd:element>
+                <xsd:element name="column4" id="e7" type="xsd:int"></xsd:element>
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>

@@ -1,0 +1,15 @@
+<emds.epi.decl.server.landscape.entries.FileEnvironmentEntry id="1">
+  <name>ee_csv_filePath</name>
+  <description></description>
+  <processSenarioID>9c2019c0-9ea9-41c8-8e33-9db9bf08069c</processSenarioID>
+  <ID>38</ID>
+  <revisionNumber>1655924872839</revisionNumber>
+  <groupId>9</groupId>
+  <autoDeleteFlag>false</autoDeleteFlag>
+  <importRevision>0</importRevision>
+  <entryTypeName>filepath</entryTypeName>
+  <isOriginal>true</isOriginal>
+  <useRuntimeLink>false</useRuntimeLink>
+  <filepath>D:\Soffico\Training\soffico\scenario\tmp</filepath>
+  <protocoll>LOCAL</protocoll>
+</emds.epi.decl.server.landscape.entries.FileEnvironmentEntry>
