@@ -1,0 +1,10 @@
+<Group id="1">
+  <name>Soap_Artikel_Provider_Soap_Artikel_Provider</name>
+  <processSenarioID>88df2f36-c28b-45bb-b6fc-830d4c213f12</processSenarioID>
+  <ID>24</ID>
+  <revisionNumber>1655903921762</revisionNumber>
+  <groupId>12</groupId>
+  <autoDeleteFlag>true</autoDeleteFlag>
+  <importRevision>0</importRevision>
+  <memberTypeName>ServiceDeclaration</memberTypeName>
+</Group>

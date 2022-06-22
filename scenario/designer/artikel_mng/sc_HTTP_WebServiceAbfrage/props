@@ -1,0 +1,9 @@
+# scenario properties
+# Wed Jun 22 15:11:07 CEST 2022
+UUID=88df2f36-c28b-45bb-b6fc-830d4c213f12
+charset=ISO-8859-1
+description=
+formatVersion=106
+name=sc_HTTP_WebServiceAbfrage
+orchestraVersion=4.8.2.5 build number 136
+scenarioType=0

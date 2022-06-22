@@ -1,0 +1,17 @@
+Referred element;Referer
+{88df2f36-c28b-45bb-b6fc-830d4c213f12:ServiceInterface}34;{88df2f36-c28b-45bb-b6fc-830d4c213f12:ProcessModell}35
+{88df2f36-c28b-45bb-b6fc-830d4c213f12:Channel}33;{88df2f36-c28b-45bb-b6fc-830d4c213f12:ProcessModell}35
+{88df2f36-c28b-45bb-b6fc-830d4c213f12:MessageType}31;{88df2f36-c28b-45bb-b6fc-830d4c213f12:ProcessModell}35
+{88df2f36-c28b-45bb-b6fc-830d4c213f12:MessageType}30;{88df2f36-c28b-45bb-b6fc-830d4c213f12:ProcessModell}35
+{88df2f36-c28b-45bb-b6fc-830d4c213f12:ServiceInterface}29;{88df2f36-c28b-45bb-b6fc-830d4c213f12:ProcessModell}35
+{88df2f36-c28b-45bb-b6fc-830d4c213f12:ServiceDeclaration}28;{88df2f36-c28b-45bb-b6fc-830d4c213f12:ProcessModell}35
+{88df2f36-c28b-45bb-b6fc-830d4c213f12:ServiceInterface}34;{88df2f36-c28b-45bb-b6fc-830d4c213f12:Channel}33
+{88df2f36-c28b-45bb-b6fc-830d4c213f12:MessageType}31;{88df2f36-c28b-45bb-b6fc-830d4c213f12:Channel}33
+{88df2f36-c28b-45bb-b6fc-830d4c213f12:MessageType}30;{88df2f36-c28b-45bb-b6fc-830d4c213f12:Channel}33
+{88df2f36-c28b-45bb-b6fc-830d4c213f12:XMLSchema}27;{88df2f36-c28b-45bb-b6fc-830d4c213f12:MessageType}31
+{88df2f36-c28b-45bb-b6fc-830d4c213f12:XMLSchema}27;{88df2f36-c28b-45bb-b6fc-830d4c213f12:MessageType}30
+{88df2f36-c28b-45bb-b6fc-830d4c213f12:MessageType}31;{88df2f36-c28b-45bb-b6fc-830d4c213f12:ServiceInterface}29
+{88df2f36-c28b-45bb-b6fc-830d4c213f12:MessageType}30;{88df2f36-c28b-45bb-b6fc-830d4c213f12:ServiceInterface}29
+{88df2f36-c28b-45bb-b6fc-830d4c213f12:EnvironmentEntry}32;{88df2f36-c28b-45bb-b6fc-830d4c213f12:ServiceDeclaration}28
+{88df2f36-c28b-45bb-b6fc-830d4c213f12:ServiceInterface}29;{88df2f36-c28b-45bb-b6fc-830d4c213f12:ServiceDeclaration}28
+{88df2f36-c28b-45bb-b6fc-830d4c213f12:XMLSchema}27;{88df2f36-c28b-45bb-b6fc-830d4c213f12:ServiceDeclaration}28

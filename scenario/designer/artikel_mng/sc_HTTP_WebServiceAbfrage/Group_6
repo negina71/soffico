@@ -1,0 +1,10 @@
+<Group id="1">
+  <name>Channels</name>
+  <processSenarioID>88df2f36-c28b-45bb-b6fc-830d4c213f12</processSenarioID>
+  <ID>6</ID>
+  <revisionNumber>0</revisionNumber>
+  <groupId>-1</groupId>
+  <autoDeleteFlag>false</autoDeleteFlag>
+  <importRevision>0</importRevision>
+  <memberTypeName>Channel</memberTypeName>
+</Group>

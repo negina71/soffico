@@ -1,0 +1,33 @@
+<emds.epi.impl.adapter.http.inbound.HttpAdapterParameterConfig id="1">
+  <name>ch_http_get_artikel</name>
+  <description></description>
+  <processSenarioID>88df2f36-c28b-45bb-b6fc-830d4c213f12</processSenarioID>
+  <ID>33</ID>
+  <revisionNumber>1655904066305</revisionNumber>
+  <groupId>6</groupId>
+  <autoDeleteFlag>false</autoDeleteFlag>
+  <importRevision>0</importRevision>
+  <channelTypeName>HTTP.Inbound.Get</channelTypeName>
+  <numberOfInstances>1</numberOfInstances>
+  <defaultOperation id="2">88df2f36-c28b-45bb-b6fc-830d4c213f12:ServiceInterface:34</defaultOperation>
+  <interfaceOperations id="3">
+    <emds.epi.decl.modell.Reference reference="2"/>
+  </interfaceOperations>
+  <isJunoChannel>false</isJunoChannel>
+  <isSynchronous>true</isSynchronous>
+  <users id="4"/>
+  <authMethod>0</authMethod>
+  <synchronousTimeout id="5">
+    <unit>SECOND</unit>
+    <value>250</value>
+  </synchronousTimeout>
+  <allowSuperUser>false</allowSuperUser>
+  <checkSignersAgainstTrustStore>false</checkSignersAgainstTrustStore>
+  <allowAnonymousAccess>false</allowAnonymousAccess>
+  <checkCertificateChain>false</checkCertificateChain>
+  <checkCertificateValidity>false</checkCertificateValidity>
+  <wantStandardFormat>true</wantStandardFormat>
+  <responseMessage id="6">88df2f36-c28b-45bb-b6fc-830d4c213f12:MessageType:31</responseMessage>
+  <requestMessage id="7">88df2f36-c28b-45bb-b6fc-830d4c213f12:MessageType:30</requestMessage>
+  <copyComplexValuesWithoutAdditionalLevel>false</copyComplexValuesWithoutAdditionalLevel>
+</emds.epi.impl.adapter.http.inbound.HttpAdapterParameterConfig>

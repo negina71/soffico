@@ -1,0 +1,114 @@
+<emds.epi.decl.modell.ServiceDeclaration id="1">
+  <name>Soap_Artikel_Provider_Soap_Artikel_Provider</name>
+  <processSenarioID>88df2f36-c28b-45bb-b6fc-830d4c213f12</processSenarioID>
+  <ID>28</ID>
+  <revisionNumber>1655903921856</revisionNumber>
+  <groupId>24</groupId>
+  <autoDeleteFlag>false</autoDeleteFlag>
+  <importRevision>0</importRevision>
+  <supportedOperations id="2">
+    <emds.epi.decl.modell.Reference id="3">88df2f36-c28b-45bb-b6fc-830d4c213f12:ServiceInterface:29</emds.epi.decl.modell.Reference>
+  </supportedOperations>
+  <bindings id="4">
+    <emds.epi.decl.service.Binding id="5">
+      <bindingType>SoapBinding</bindingType>
+      <bindings id="6">
+        <emds.epi.decl.service.MethodBinding id="7">
+          <originOperation id="8">88df2f36-c28b-45bb-b6fc-830d4c213f12:ServiceInterface:29</originOperation>
+          <serviceOperation reference="8"/>
+          <protocollData class="emds.util.wsdl.SOAPMethodBinding" id="9">
+            <soapAction>getArtikel</soapAction>
+            <style>document</style>
+            <input id="10">
+              <parts></parts>
+              <use>literal</use>
+              <encodingStyle>http://schemas.xmlsoap.org/soap/encoding/</encodingStyle>
+              <namespaceURI></namespaceURI>
+            </input>
+            <inputHeader id="11"/>
+            <provideHttpHeaders>false</provideHttpHeaders>
+            <output id="12">
+              <parts></parts>
+              <use>literal</use>
+              <encodingStyle>http://schemas.xmlsoap.org/soap/encoding/</encodingStyle>
+              <namespaceURI></namespaceURI>
+            </output>
+            <recordHttpHeaders>false</recordHttpHeaders>
+            <outputHeader id="13"/>
+            <useAttachments>false</useAttachments>
+            <enforceMTOM>false</enforceMTOM>
+            <allowAnyHeaderElement>false</allowAnyHeaderElement>
+          </protocollData>
+        </emds.epi.decl.service.MethodBinding>
+      </bindings>
+      <name id="14">
+        <namespaceURI>urn:service</namespaceURI>
+        <localPart>SoapBinding</localPart>
+        <prefix></prefix>
+      </name>
+      <description>Imported from wsdl</description>
+      <bindingSpecific class="emds.util.wsdl.SOAPBinding" id="15">
+        <transport>http://schemas.xmlsoap.org/soap/http</transport>
+        <defaultStyle>document</defaultStyle>
+        <soapVersion>Soap 1.1</soapVersion>
+        <omitXMLHeader>false</omitXMLHeader>
+        <enableMTOM>false</enableMTOM>
+      </bindingSpecific>
+    </emds.epi.decl.service.Binding>
+  </bindings>
+  <ports id="16">
+    <emds.epi.decl.service.Port id="17">
+      <name>PortSoapBinding_0</name>
+      <endpoint class="emds.epi.decl.service.URLEndpoint" id="18">
+        <supportedTypes id="19">
+          <emds.util.wsdl.BindingType>SoapBinding</emds.util.wsdl.BindingType>
+        </supportedTypes>
+        <urlReference id="20">88df2f36-c28b-45bb-b6fc-830d4c213f12:EnvironmentEntry:32</urlReference>
+        <authMode>0</authMode>
+        <httpConfig id="21">
+          <usePreemptiveAuthorization>false</usePreemptiveAuthorization>
+          <authMode>AUTH_NONE</authMode>
+          <connectTimeout id="22">
+            <unit>SECOND</unit>
+            <value>15</value>
+          </connectTimeout>
+          <readTimeout id="23">
+            <unit>SECOND</unit>
+            <value>30</value>
+          </readTimeout>
+          <checkCiphers>false</checkCiphers>
+          <checkValidity>false</checkValidity>
+          <checkCertChain>false</checkCertChain>
+          <checkTrustedSigner>false</checkTrustedSigner>
+          <checkSignersAgainstTrustStore>false</checkSignersAgainstTrustStore>
+        </httpConfig>
+        <wssConfig id="24">
+          <useWsSecurity>false</useWsSecurity>
+          <wsSecurityParameters id="25">
+            <parameterMap id="26"/>
+            <inboundHandlerInformationList id="27"/>
+            <outboundHandlerInformationList id="28"/>
+            <inEncryptionParts id="29"/>
+            <inSigninatureParts id="30"/>
+            <outEncryptionParts id="31"/>
+            <outSigninatureParts id="32"/>
+            <mustUnderstandHeader>false</mustUnderstandHeader>
+          </wsSecurityParameters>
+          <logger>emds.runtime</logger>
+          <logLevel>OFF</logLevel>
+        </wssConfig>
+      </endpoint>
+      <binding reference="5"/>
+    </emds.epi.decl.service.Port>
+  </ports>
+  <schemas id="33">
+    <emds.epi.decl.modell.Reference id="34">88df2f36-c28b-45bb-b6fc-830d4c213f12:XMLSchema:27</emds.epi.decl.modell.Reference>
+  </schemas>
+  <publicInterfaceName id="35">
+    <namespaceURI>urn:service</namespaceURI>
+    <localPart>Soap_Artikel_Provider</localPart>
+    <prefix></prefix>
+  </publicInterfaceName>
+  <isSubscriber>false</isSubscriber>
+  <importSource>file:/D:/Soffico/Training/soffico/scenario/wsdl/Soap_Artikel_Provider.wsdl</importSource>
+</emds.epi.decl.modell.ServiceDeclaration>

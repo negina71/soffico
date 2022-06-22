@@ -1,0 +1,1 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><xsd:schema xmlns:typens="urn:webservice" xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="urn:webservice"><xsd:import namespace="urn:webservice" schemaLocation="orch:88df2f36-c28b-45bb-b6fc-830d4c213f12:XMLSchema:27"/><xsd:element id="e1" ref="typens:mt_Request_ID"/></xsd:schema>

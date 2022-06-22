@@ -1,0 +1,10 @@
+<Group id="1">
+  <name>Roles</name>
+  <processSenarioID>88df2f36-c28b-45bb-b6fc-830d4c213f12</processSenarioID>
+  <ID>20</ID>
+  <revisionNumber>1655903467563</revisionNumber>
+  <groupId>16</groupId>
+  <autoDeleteFlag>false</autoDeleteFlag>
+  <importRevision>0</importRevision>
+  <memberTypeName>Role</memberTypeName>
+</Group>
