@@ -1,0 +1,118 @@
+<emds.epi.decl.modell.ServiceProvider id="1">
+  <name>Soap_Artikel_Provider</name>
+  <description></description>
+  <processSenarioID>89d50e8f-8c8a-41d5-b3f6-33b07c8e4327</processSenarioID>
+  <ID>30</ID>
+  <revisionNumber>1655894173993</revisionNumber>
+  <groupId>13</groupId>
+  <autoDeleteFlag>false</autoDeleteFlag>
+  <importRevision>0</importRevision>
+  <publicProviderName id="2">
+    <namespaceURI>urn:service</namespaceURI>
+    <localPart>Soap_Artikel_Provider</localPart>
+    <prefix></prefix>
+  </publicProviderName>
+  <publicInterfaceName id="3">
+    <namespaceURI>urn:service</namespaceURI>
+    <localPart>Soap_Artikel_Provider</localPart>
+    <prefix></prefix>
+  </publicInterfaceName>
+  <serviceMappings id="4">
+    <emds.epi.decl.modell.ServiceMapping id="5">
+      <technicalElement id="6">89d50e8f-8c8a-41d5-b3f6-33b07c8e4327:ProcessModell:29</technicalElement>
+      <serviceInterface id="7">89d50e8f-8c8a-41d5-b3f6-33b07c8e4327:ServiceInterface:32</serviceInterface>
+      <requestAssignment id="8">
+        <Assignment id="9">
+          <targetPropertyName>input_ID</targetPropertyName>
+          <sourceExpr id="10">
+            <expression>getArtikel</expression>
+            <implementingLanguage>Java</implementingLanguage>
+          </sourceExpr>
+        </Assignment>
+      </requestAssignment>
+      <responseAssignment id="11">
+        <Assignment id="12">
+          <targetPropertyName>getArtikelResponse</targetPropertyName>
+          <sourceExpr id="13">
+            <expression>output_Artikel</expression>
+            <implementingLanguage>Java</implementingLanguage>
+          </sourceExpr>
+        </Assignment>
+      </responseAssignment>
+      <namespaceDeclarations id="14"/>
+      <onErrorWriteResponse>false</onErrorWriteResponse>
+    </emds.epi.decl.modell.ServiceMapping>
+  </serviceMappings>
+  <authMethod>0</authMethod>
+  <isPublicService>false</isPublicService>
+  <allowWSDLWithoutSecurity>false</allowWSDLWithoutSecurity>
+  <subscriberImpl>false</subscriberImpl>
+  <categoryProcess>false</categoryProcess>
+  <supportedOperations id="15">
+    <emds.epi.decl.modell.Reference id="16">89d50e8f-8c8a-41d5-b3f6-33b07c8e4327:ServiceInterface:32</emds.epi.decl.modell.Reference>
+  </supportedOperations>
+  <bindings id="17">
+    <emds.epi.decl.service.Binding id="18">
+      <bindingType>SoapBinding</bindingType>
+      <bindings id="19">
+        <emds.epi.decl.service.MethodBinding id="20">
+          <originOperation id="21">89d50e8f-8c8a-41d5-b3f6-33b07c8e4327:ServiceInterface:32</originOperation>
+          <serviceOperation reference="21"/>
+          <protocollData class="emds.util.wsdl.SOAPMethodBinding" id="22">
+            <soapAction>getArtikel</soapAction>
+            <style>document</style>
+            <input id="23">
+              <use>literal</use>
+              <encodingStyle>http://schemas.xmlsoap.org/soap/encoding/</encodingStyle>
+            </input>
+            <inputHeader id="24"/>
+            <provideHttpHeaders>false</provideHttpHeaders>
+            <output id="25">
+              <use>literal</use>
+              <encodingStyle>http://schemas.xmlsoap.org/soap/encoding/</encodingStyle>
+            </output>
+            <recordHttpHeaders>false</recordHttpHeaders>
+            <outputHeader id="26"/>
+            <useAttachments>false</useAttachments>
+            <enforceMTOM>false</enforceMTOM>
+            <allowAnyHeaderElement>false</allowAnyHeaderElement>
+          </protocollData>
+        </emds.epi.decl.service.MethodBinding>
+      </bindings>
+      <name id="27">
+        <namespaceURI>urn:service</namespaceURI>
+        <localPart>SoapBinding</localPart>
+        <prefix></prefix>
+      </name>
+      <description></description>
+      <bindingSpecific class="emds.util.wsdl.SOAPBinding" id="28">
+        <transport>http://schemas.xmlsoap.org/soap/http</transport>
+        <defaultStyle>document</defaultStyle>
+        <soapVersion>Soap 1.1</soapVersion>
+        <omitXMLHeader>false</omitXMLHeader>
+        <enableMTOM>false</enableMTOM>
+      </bindingSpecific>
+    </emds.epi.decl.service.Binding>
+  </bindings>
+  <ports id="29">
+    <emds.epi.decl.service.PortImpl id="30">
+      <portName>PortSoapBinding_0</portName>
+      <endpointImpl class="emds.epi.decl.service.HttpEndpointImpl" id="31">
+        <supportedTypes id="32">
+          <emds.util.wsdl.BindingType>SoapBinding</emds.util.wsdl.BindingType>
+        </supportedTypes>
+        <authMethod>0</authMethod>
+        <wantSecurePort>false</wantSecurePort>
+        <overwriteBasePath>false</overwriteBasePath>
+        <checkSignersAgainstTrustStore>false</checkSignersAgainstTrustStore>
+        <allowAnonymousAccess>false</allowAnonymousAccess>
+        <checkCertificateChain>false</checkCertificateChain>
+        <checkCertificateValidity>false</checkCertificateValidity>
+      </endpointImpl>
+      <binding reference="18"/>
+    </emds.epi.decl.service.PortImpl>
+  </ports>
+  <schemas id="33"/>
+  <defaultAction></defaultAction>
+  <ensureUniqueProviderName>false</ensureUniqueProviderName>
+</emds.epi.decl.modell.ServiceProvider>

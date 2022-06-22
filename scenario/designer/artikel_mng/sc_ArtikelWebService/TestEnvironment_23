@@ -2,9 +2,50 @@
   <name>test_environment</name>
   <processSenarioID>89d50e8f-8c8a-41d5-b3f6-33b07c8e4327</processSenarioID>
   <ID>23</ID>
-  <revisionNumber>1655842511795</revisionNumber>
+  <revisionNumber>1655895831870</revisionNumber>
   <groupId>-1</groupId>
   <autoDeleteFlag>false</autoDeleteFlag>
   <importRevision>0</importRevision>
-  <testSettings id="2"/>
+  <testSettings id="2">
+    <entry>
+      <string>CELLPORT</string>
+      <string>8899</string>
+    </entry>
+    <entry>
+      <string>HTTPSPORT</string>
+      <string>8843</string>
+    </entry>
+    <entry>
+      <string>CELLMODE</string>
+      <string>0</string>
+    </entry>
+    <entry>
+      <string>WEBAPP.HTTPSPORT</string>
+      <string>8191</string>
+    </entry>
+    <entry>
+      <string>HTTPSAUTHPORT</string>
+      <string>8844</string>
+    </entry>
+    <entry>
+      <string>WEBAPP.HTTPPORT</string>
+      <string>8190</string>
+    </entry>
+    <entry>
+      <string>AS2PORT</string>
+      <string>8120</string>
+    </entry>
+    <entry>
+      <string>INCLUDES</string>
+      <string>0</string>
+    </entry>
+    <entry>
+      <string>HTTPPORT</string>
+      <string>8819</string>
+    </entry>
+    <entry>
+      <string>AS2PORT_TLS</string>
+      <string>8121</string>
+    </entry>
+  </testSettings>
 </emds.epi.decl.modell.TestEnvironment>

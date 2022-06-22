@@ -1,0 +1,27 @@
+<emds.epi.decl.modell.ServiceInterface id="1">
+  <name>getArtikel</name>
+  <description></description>
+  <processSenarioID>89d50e8f-8c8a-41d5-b3f6-33b07c8e4327</processSenarioID>
+  <ID>32</ID>
+  <revisionNumber>1655894173993</revisionNumber>
+  <groupId>11</groupId>
+  <autoDeleteFlag>true</autoDeleteFlag>
+  <importRevision>0</importRevision>
+  <exchangePattern>REQUEST_RESPONSE</exchangePattern>
+  <parameters id="2">
+    <Property id="3">
+      <name>getArtikel</name>
+      <type class="ArgumentType">message</type>
+      <messageType id="4">89d50e8f-8c8a-41d5-b3f6-33b07c8e4327:MessageType:24</messageType>
+      <usagePattern>INPUT</usagePattern>
+      <requiredOnInput>false</requiredOnInput>
+    </Property>
+    <Property id="5">
+      <name>getArtikelResponse</name>
+      <type class="ArgumentType">message</type>
+      <messageType id="6">89d50e8f-8c8a-41d5-b3f6-33b07c8e4327:MessageType:26</messageType>
+      <usagePattern>OUTPUT</usagePattern>
+      <requiredOnInput>false</requiredOnInput>
+    </Property>
+  </parameters>
+</emds.epi.decl.modell.ServiceInterface>

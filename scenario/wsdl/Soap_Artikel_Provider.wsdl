@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?><wsdl:definitions xmlns:DT1="urn:webservice" xmlns:emds="urn:emds:service" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:tns="urn:service" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="urn:service"><wsdl:types><xsd:schema xmlns:emds="http://www.emds-ag.de/namespace/" xmlns:tns="urn:webservice" elementFormDefault="qualified" emds:messageFormat="XML" targetNamespace="urn:webservice">
+    <xsd:element name="mt_Request_ID">
+      <xsd:complexType>
+        <xsd:sequence>
+          <xsd:element name="ID" type="xsd:string"/>
+        </xsd:sequence>
+      </xsd:complexType>
+    </xsd:element>
+  <xsd:element name="mt_Response_Artikel">
+      <xsd:complexType>
+        <xsd:sequence>
+          <xsd:element maxOccurs="unbounded" minOccurs="0" name="artikel">
+            <xsd:annotation>
+              <xsd:appinfo source="emdsorch:tablename">artikel</xsd:appinfo>
+            </xsd:annotation>
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="ARTIKEL_ID">
+                  <xsd:annotation>
+                    <xsd:appinfo source="emdsorch:columnname">ARTIKEL_ID</xsd:appinfo>
+                    <xsd:appinfo source="emdsorch:dbtypename">VARCHAR</xsd:appinfo>
+                    <xsd:appinfo source="emdsorch:usage">insertOnly</xsd:appinfo>
+                  </xsd:annotation>
+                  <xsd:simpleType>
+                    <xsd:restriction base="xsd:string">
+                      <xsd:maxLength value="20"/>
+                    </xsd:restriction>
+                  </xsd:simpleType>
+                </xsd:element>
+                <xsd:element name="ARTIKELNAME">
+                  <xsd:annotation>
+                    <xsd:appinfo source="emdsorch:columnname">ARTIKELNAME</xsd:appinfo>
+                    <xsd:appinfo source="emdsorch:dbtypename">VARCHAR</xsd:appinfo>
+                  </xsd:annotation>
+                  <xsd:simpleType>
+                    <xsd:restriction base="xsd:string">
+                      <xsd:maxLength value="30"/>
+                    </xsd:restriction>
+                  </xsd:simpleType>
+                </xsd:element>
+                <xsd:element name="HERSTELLER">
+                  <xsd:annotation>
+                    <xsd:appinfo source="emdsorch:columnname">HERSTELLER</xsd:appinfo>
+                    <xsd:appinfo source="emdsorch:dbtypename">VARCHAR</xsd:appinfo>
+                  </xsd:annotation>
+                  <xsd:simpleType>
+                    <xsd:restriction base="xsd:string">
+                      <xsd:maxLength value="10"/>
+                    </xsd:restriction>
+                  </xsd:simpleType>
+                </xsd:element>
+                <xsd:element name="PREIS" type="xsd:double">
+                  <xsd:annotation>
+                    <xsd:appinfo source="emdsorch:columnname">PREIS</xsd:appinfo>
+                    <xsd:appinfo source="emdsorch:dbtypename">FLOAT</xsd:appinfo>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element name="MENGE">
+                  <xsd:annotation>
+                    <xsd:appinfo source="emdsorch:columnname">MENGE</xsd:appinfo>
+                    <xsd:appinfo source="emdsorch:dbtypename">INT</xsd:appinfo>
+                  </xsd:annotation>
+                  <xsd:simpleType>
+                    <xsd:restriction base="xsd:long">
+                      <xsd:totalDigits value="10"/>
+                    </xsd:restriction>
+                  </xsd:simpleType>
+                </xsd:element>
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:key name="artikel_PRIMARY">
+        <xsd:selector xpath="artikel"/>
+        <xsd:field xpath="ARTIKEL_ID"/>
+      </xsd:key>
+    </xsd:element></xsd:schema></wsdl:types><wsdl:message name="getArtikelRequest"><wsdl:part element="DT1:mt_Request_ID" name="getArtikel"/></wsdl:message><wsdl:message name="getArtikelResponse"><wsdl:part element="DT1:mt_Response_Artikel" name="getArtikelResponse"/></wsdl:message><wsdl:portType name="Soap_Artikel_Provider"><wsdl:operation name="getArtikel"><wsdl:input message="tns:getArtikelRequest"/><wsdl:output message="tns:getArtikelResponse"/></wsdl:operation></wsdl:portType><wsdl:binding name="SoapBinding" type="tns:Soap_Artikel_Provider"><soap11:binding style="document" transport="http://schemas.xmlsoap.org/soap/http" xmlns:soap11="http://schemas.xmlsoap.org/wsdl/soap/"/><wsdl:operation name="getArtikel"><soap11:operation soapAction="getArtikel" style="document" xmlns:soap11="http://schemas.xmlsoap.org/wsdl/soap/"/><wsdl:input><soap11:body use="literal" xmlns:soap11="http://schemas.xmlsoap.org/wsdl/soap/"/></wsdl:input><wsdl:output><soap11:body use="literal" xmlns:soap11="http://schemas.xmlsoap.org/wsdl/soap/"/></wsdl:output></wsdl:operation></wsdl:binding><wsdl:service name="Soap_Artikel_Provider"><wsdl:port binding="tns:SoapBinding" name="PortSoapBinding_0"><soap11:address location="http://localhost:&lt;port&gt;/Orchestra/89d50e8f-8c8a-41d5-b3f6-33b07c8e4327/30/PortSoapBinding_0/Soap_Artikel_Provider" xmlns:soap11="http://schemas.xmlsoap.org/wsdl/soap/"/></wsdl:port></wsdl:service></wsdl:definitions>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 
-  <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:emds="http://www.emds-ag.de/namespace/" elementFormDefault="unqualified" emds:messageFormat="CSV">
+  <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:emds="http://www.emds-ag.de/namespace/" xmlns:tns="urn:webservice" targetNamespace="urn:webservice" elementFormDefault="unqualified" emds:messageFormat="CSV">
     <xsd:element name="mt_Response_Artikel" id="e1">
       <xsd:complexType>
         <xsd:sequence>

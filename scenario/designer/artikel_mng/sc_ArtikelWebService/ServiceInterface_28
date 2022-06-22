@@ -2,7 +2,7 @@
   <name>DEFAULT_INTERFACE</name>
   <processSenarioID>89d50e8f-8c8a-41d5-b3f6-33b07c8e4327</processSenarioID>
   <ID>28</ID>
-  <revisionNumber>1655843431231</revisionNumber>
+  <revisionNumber>1655888338498</revisionNumber>
   <groupId>11</groupId>
   <autoDeleteFlag>false</autoDeleteFlag>
   <importRevision>0</importRevision>
@@ -21,7 +21,7 @@
       <type class="SimpleType">string</type>
       <messageType id="6">89d50e8f-8c8a-41d5-b3f6-33b07c8e4327:MessageType:24</messageType>
       <usagePattern>INPUT</usagePattern>
-      <requiredOnInput>false</requiredOnInput>
+      <requiredOnInput>true</requiredOnInput>
     </Property>
   </parameters>
 </emds.epi.decl.modell.ServiceInterface>

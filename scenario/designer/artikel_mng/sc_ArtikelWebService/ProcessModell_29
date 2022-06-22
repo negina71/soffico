@@ -1,0 +1,294 @@
+<ProcessModel id="1">
+  <name>pm_ArtikelWebService</name>
+  <description></description>
+  <processSenarioID>89d50e8f-8c8a-41d5-b3f6-33b07c8e4327</processSenarioID>
+  <ID>29</ID>
+  <revisionNumber>1655895817414</revisionNumber>
+  <groupId>5</groupId>
+  <autoDeleteFlag>false</autoDeleteFlag>
+  <importRevision>0</importRevision>
+  <isPersistent>false</isPersistent>
+  <useRecovery>false</useRecovery>
+  <isMassData>false</isMassData>
+  <isFifo>false</isFifo>
+  <isGroupedFifo>false</isGroupedFifo>
+  <ensureEventFifo>false</ensureEventFifo>
+  <priority>NORMAL</priority>
+  <priorityDerived>false</priorityDerived>
+  <logLevel>0</logLevel>
+  <deleteLog>false</deleteLog>
+  <redeployPolicy>0</redeployPolicy>
+  <volatilePoicy>0</volatilePoicy>
+  <manualRestart>false</manualRestart>
+  <transactionSpec id="2">
+    <transactionType>STANDARD</transactionType>
+    <demarcation>0</demarcation>
+    <timeout>0</timeout>
+  </transactionSpec>
+  <processTyp>0</processTyp>
+  <clusterMode>0</clusterMode>
+  <pipelineMode>false</pipelineMode>
+  <bestEffortLimit>0</bestEffortLimit>
+  <businessKeys id="3"/>
+  <processObjects id="4">
+    <EventStart id="5">
+      <processModel reference="1"/>
+      <id>101</id>
+      <displayText>start</displayText>
+      <inAssignments id="6"/>
+      <outAssignments id="7"/>
+      <xpos>70.0</xpos>
+      <ypos>60.0</ypos>
+      <width>20.0</width>
+      <height>20.0</height>
+    </EventStart>
+    <EventEnd id="8">
+      <processModel reference="1"/>
+      <id>102</id>
+      <displayText>end</displayText>
+      <inAssignments id="9"/>
+      <outAssignments id="10"/>
+      <xpos>480.0</xpos>
+      <ypos>60.0</ypos>
+      <width>20.0</width>
+      <height>20.0</height>
+    </EventEnd>
+    <emds.epi.decl.modell.process.ServiceTask id="11">
+      <processModel reference="1"/>
+      <id>103</id>
+      <displayText>call</displayText>
+      <inAssignments id="12">
+        <Assignment id="13">
+          <targetPropertyName>ID</targetPropertyName>
+          <sourceExpr id="14">
+            <expression>$input_ID/ns1:ID</expression>
+            <implementingLanguage>XPath</implementingLanguage>
+          </sourceExpr>
+        </Assignment>
+      </inAssignments>
+      <outAssignments id="15">
+        <Assignment id="16">
+          <targetPropertyName>output_Artikel</targetPropertyName>
+          <sourceExpr id="17">
+            <expression>MSG</expression>
+            <implementingLanguage>Java</implementingLanguage>
+          </sourceExpr>
+        </Assignment>
+      </outAssignments>
+      <xpos>290.0</xpos>
+      <ypos>50.0</ypos>
+      <width>80.0</width>
+      <height>40.0</height>
+      <namespaceContext id="18">
+        <emds.epi.decl.modell.process.NamespaceDeclaration id="19">
+          <prefix>ns1</prefix>
+          <namespaceURI>urn:webservice</namespaceURI>
+        </emds.epi.decl.modell.process.NamespaceDeclaration>
+      </namespaceContext>
+      <intermediateEvents id="20"/>
+      <transactionMode>ACTIVITY_USE_ACTIVE_OR_ATTACH</transactionMode>
+      <retryCount>3</retryCount>
+      <retryDelay id="21">
+        <unit>SECOND</unit>
+        <value>10</value>
+      </retryDelay>
+      <userDefined>false</userDefined>
+      <messageSizeStrategy>0</messageSizeStrategy>
+      <operation id="22">89d50e8f-8c8a-41d5-b3f6-33b07c8e4327:ServiceInterface:28</operation>
+      <channel id="23">89d50e8f-8c8a-41d5-b3f6-33b07c8e4327:Channel:27</channel>
+      <properties id="24">
+        <Property id="25">
+          <name>MSG</name>
+          <type class="ArgumentType">message</type>
+          <messageType id="26">89d50e8f-8c8a-41d5-b3f6-33b07c8e4327:MessageType:26</messageType>
+          <usagePattern>OUTPUT</usagePattern>
+          <description>message from database</description>
+          <requiredOnInput>true</requiredOnInput>
+        </Property>
+        <Property id="27">
+          <name>ID</name>
+          <type class="SimpleType">string</type>
+          <messageType id="28">89d50e8f-8c8a-41d5-b3f6-33b07c8e4327:MessageType:24</messageType>
+          <usagePattern>INPUT</usagePattern>
+          <requiredOnInput>true</requiredOnInput>
+        </Property>
+      </properties>
+    </emds.epi.decl.modell.process.ServiceTask>
+    <ExternalSystem id="29">
+      <processModel reference="1"/>
+      <id>105</id>
+      <displayText>ch_Database_Reader</displayText>
+      <inAssignments id="30"/>
+      <outAssignments id="31"/>
+      <xpos>260.0</xpos>
+      <ypos>190.0</ypos>
+      <width>140.0</width>
+      <height>40.0</height>
+      <channelRef id="32">89d50e8f-8c8a-41d5-b3f6-33b07c8e4327:Channel:27</channelRef>
+      <isInbound>false</isInbound>
+      <isOutbound>true</isOutbound>
+      <role>Channel</role>
+    </ExternalSystem>
+    <emds.epi.decl.modell.process.ScriptTask id="33">
+      <processModel reference="1"/>
+      <id>112</id>
+      <displayText>init</displayText>
+      <inAssignments id="34">
+        <Assignment id="35">
+          <targetPropertyName>TIMESTAMP</targetPropertyName>
+          <sourceExpr id="36">
+            <expression>getFormattedTimestamp(&quot;yyyyMMddhhmmss&quot;)</expression>
+            <implementingLanguage>Java</implementingLanguage>
+          </sourceExpr>
+        </Assignment>
+        <Assignment id="37">
+          <targetPropertyName>UUID</targetPropertyName>
+          <sourceExpr id="38">
+            <expression>input_ID.getMessageID().replaceAll(&quot;[^0-9UUID]&quot;,&quot;&quot;)</expression>
+            <implementingLanguage>Java</implementingLanguage>
+          </sourceExpr>
+        </Assignment>
+      </inAssignments>
+      <outAssignments id="39">
+        <Assignment id="40">
+          <targetPropertyName>TIMESTAMP</targetPropertyName>
+          <sourceExpr id="41">
+            <expression>TIMESTAMP</expression>
+            <implementingLanguage>Java</implementingLanguage>
+          </sourceExpr>
+        </Assignment>
+        <Assignment id="42">
+          <targetPropertyName>UUID</targetPropertyName>
+          <sourceExpr id="43">
+            <expression>UUID</expression>
+            <implementingLanguage>Java</implementingLanguage>
+          </sourceExpr>
+        </Assignment>
+      </outAssignments>
+      <xpos>150.0</xpos>
+      <ypos>50.0</ypos>
+      <width>80.0</width>
+      <height>40.0</height>
+      <namespaceContext id="44"/>
+      <intermediateEvents id="45"/>
+      <transactionMode>ACTIVITY_USE_ACTIVE_OR_ATTACH</transactionMode>
+      <retryCount>3</retryCount>
+      <retryDelay id="46">
+        <unit>SECOND</unit>
+        <value>10</value>
+      </retryDelay>
+      <userDefined>false</userDefined>
+      <messageSizeStrategy>0</messageSizeStrategy>
+      <script>
+/* ***************************************************************************
+ * Add your own java code
+ * ***************************************************************************/
+</script>
+      <imports>
+	</imports>
+      <parameters class="linked-list" id="47">
+        <Property id="48">
+          <name>UUID</name>
+          <type class="SimpleType">string</type>
+          <usagePattern>IN_OUT</usagePattern>
+          <requiredOnInput>false</requiredOnInput>
+        </Property>
+        <Property id="49">
+          <name>TIMESTAMP</name>
+          <type class="SimpleType">string</type>
+          <usagePattern>IN_OUT</usagePattern>
+          <requiredOnInput>false</requiredOnInput>
+        </Property>
+      </parameters>
+      <scriptID>EmptyScript</scriptID>
+      <description>A plain script</description>
+    </emds.epi.decl.modell.process.ScriptTask>
+  </processObjects>
+  <annotations id="50"/>
+  <edges id="51">
+    <EdgeSequence id="52">
+      <processModel reference="1"/>
+      <id>107</id>
+      <m__arNode id="53">
+        <EventStart reference="5"/>
+        <emds.epi.decl.modell.process.ScriptTask reference="33"/>
+      </m__arNode>
+      <bentStyle>STRAIGHT</bentStyle>
+      <defaultEdge>false</defaultEdge>
+      <showAsEdgeLabel>false</showAsEdgeLabel>
+    </EdgeSequence>
+    <EdgeSequence id="54">
+      <processModel reference="1"/>
+      <id>109</id>
+      <m__arNode id="55">
+        <emds.epi.decl.modell.process.ServiceTask reference="11"/>
+        <EventEnd reference="8"/>
+      </m__arNode>
+      <bentStyle>STRAIGHT</bentStyle>
+      <defaultEdge>false</defaultEdge>
+      <showAsEdgeLabel>false</showAsEdgeLabel>
+    </EdgeSequence>
+    <EdgeMessage id="56">
+      <processModel reference="1"/>
+      <id>111</id>
+      <m__arNode id="57">
+        <emds.epi.decl.modell.process.ServiceTask reference="11"/>
+        <ExternalSystem reference="29"/>
+      </m__arNode>
+    </EdgeMessage>
+    <EdgeSequence id="58">
+      <processModel reference="1"/>
+      <id>114</id>
+      <m__arNode id="59">
+        <emds.epi.decl.modell.process.ScriptTask reference="33"/>
+        <emds.epi.decl.modell.process.ServiceTask reference="11"/>
+      </m__arNode>
+      <bentStyle>STRAIGHT</bentStyle>
+      <defaultEdge>false</defaultEdge>
+      <showAsEdgeLabel>false</showAsEdgeLabel>
+    </EdgeSequence>
+  </edges>
+  <properties class="linked-list" id="60">
+    <Property id="61">
+      <name>CURMSG</name>
+      <type class="ArgumentType">message</type>
+      <usagePattern>LOCAL</usagePattern>
+      <description>current message</description>
+      <requiredOnInput>false</requiredOnInput>
+    </Property>
+    <Property id="62">
+      <name>ERROR</name>
+      <type class="ComplexType" id="63">error</type>
+      <usagePattern>LOCAL</usagePattern>
+      <description>Error information object</description>
+      <requiredOnInput>false</requiredOnInput>
+    </Property>
+    <Property id="64">
+      <name>input_ID</name>
+      <type class="ArgumentType">message</type>
+      <messageType id="65">89d50e8f-8c8a-41d5-b3f6-33b07c8e4327:MessageType:24</messageType>
+      <usagePattern>INPUT</usagePattern>
+      <requiredOnInput>false</requiredOnInput>
+    </Property>
+    <Property id="66">
+      <name>output_Artikel</name>
+      <type class="ArgumentType">message</type>
+      <messageType id="67">89d50e8f-8c8a-41d5-b3f6-33b07c8e4327:MessageType:26</messageType>
+      <usagePattern>OUTPUT</usagePattern>
+      <requiredOnInput>false</requiredOnInput>
+    </Property>
+    <Property id="68">
+      <name>UUID</name>
+      <type class="SimpleType">string</type>
+      <usagePattern>LOCAL</usagePattern>
+      <requiredOnInput>false</requiredOnInput>
+    </Property>
+    <Property id="69">
+      <name>TIMESTAMP</name>
+      <type class="SimpleType">string</type>
+      <usagePattern>LOCAL</usagePattern>
+      <requiredOnInput>false</requiredOnInput>
+    </Property>
+  </properties>
+  <maxElementId>114</maxElementId>
+</ProcessModel>

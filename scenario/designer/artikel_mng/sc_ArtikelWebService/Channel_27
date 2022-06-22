@@ -3,7 +3,7 @@
   <description></description>
   <processSenarioID>89d50e8f-8c8a-41d5-b3f6-33b07c8e4327</processSenarioID>
   <ID>27</ID>
-  <revisionNumber>1655843431241</revisionNumber>
+  <revisionNumber>1655888338498</revisionNumber>
   <groupId>6</groupId>
   <autoDeleteFlag>false</autoDeleteFlag>
   <importRevision>0</importRevision>
@@ -15,21 +15,82 @@
   </interfaceOperations>
   <isJunoChannel>false</isJunoChannel>
   <databaseReference id="4">89d50e8f-8c8a-41d5-b3f6-33b07c8e4327:EnvironmentEntry:25</databaseReference>
-  <parameters class="linked-list" id="5">
-    <Property id="6">
+  <messageDefinition id="5">
+    <tableDefs id="6">
+      <emds.epi.impl.adapter.database.TableDefinition id="7">
+        <elementName>artikel</elementName>
+        <tableName>artikel</tableName>
+        <childTables id="8"/>
+        <columns id="9">
+          <emds.epi.impl.adapter.database.ColumnDefinition id="10">
+            <attributeName>ARTIKEL_ID</attributeName>
+            <columnName>ARTIKEL_ID</columnName>
+            <columnType>string</columnType>
+            <dbTypeName>VARCHAR</dbTypeName>
+          </emds.epi.impl.adapter.database.ColumnDefinition>
+          <emds.epi.impl.adapter.database.ColumnDefinition id="11">
+            <attributeName>ARTIKELNAME</attributeName>
+            <columnName>ARTIKELNAME</columnName>
+            <columnType>string</columnType>
+            <dbTypeName>VARCHAR</dbTypeName>
+          </emds.epi.impl.adapter.database.ColumnDefinition>
+          <emds.epi.impl.adapter.database.ColumnDefinition id="12">
+            <attributeName>HERSTELLER</attributeName>
+            <columnName>HERSTELLER</columnName>
+            <columnType>string</columnType>
+            <dbTypeName>VARCHAR</dbTypeName>
+          </emds.epi.impl.adapter.database.ColumnDefinition>
+          <emds.epi.impl.adapter.database.ColumnDefinition id="13">
+            <attributeName>PREIS</attributeName>
+            <columnName>PREIS</columnName>
+            <columnType>double</columnType>
+            <dbTypeName>FLOAT</dbTypeName>
+          </emds.epi.impl.adapter.database.ColumnDefinition>
+          <emds.epi.impl.adapter.database.ColumnDefinition id="14">
+            <attributeName>MENGE</attributeName>
+            <columnName>MENGE</columnName>
+            <columnType>long</columnType>
+            <dbTypeName>INT</dbTypeName>
+          </emds.epi.impl.adapter.database.ColumnDefinition>
+        </columns>
+        <foreignKey id="15"/>
+        <wherePart>$(ID)=ARTIKEL_ID</wherePart>
+        <keyDefinitions id="16">
+          <entry>
+            <string>artikel_PRIMARY</string>
+            <emds.epi.impl.adapter.database.TableKey id="17">
+              <keyName>artikel_PRIMARY</keyName>
+              <columns id="18">
+                <string>ARTIKEL_ID</string>
+              </columns>
+            </emds.epi.impl.adapter.database.TableKey>
+          </entry>
+        </keyDefinitions>
+      </emds.epi.impl.adapter.database.TableDefinition>
+    </tableDefs>
+    <messageReference id="19">89d50e8f-8c8a-41d5-b3f6-33b07c8e4327:MessageType:26</messageReference>
+    <messageName id="20">
+      <namespaceURI></namespaceURI>
+      <localPart>mt_Response_Artikel</localPart>
+      <prefix></prefix>
+    </messageName>
+  </messageDefinition>
+  <rootTable>artikel</rootTable>
+  <parameters class="linked-list" id="21">
+    <Property id="22">
       <name>MSG</name>
       <type class="ArgumentType">message</type>
-      <messageType id="7">89d50e8f-8c8a-41d5-b3f6-33b07c8e4327:MessageType:26</messageType>
+      <messageType id="23">89d50e8f-8c8a-41d5-b3f6-33b07c8e4327:MessageType:26</messageType>
       <usagePattern>OUTPUT</usagePattern>
       <description>message from database</description>
       <requiredOnInput>true</requiredOnInput>
     </Property>
-    <Property id="8">
+    <Property id="24">
       <name>ID</name>
       <type class="SimpleType">string</type>
-      <messageType id="9">89d50e8f-8c8a-41d5-b3f6-33b07c8e4327:MessageType:24</messageType>
+      <messageType id="25">89d50e8f-8c8a-41d5-b3f6-33b07c8e4327:MessageType:24</messageType>
       <usagePattern>INPUT</usagePattern>
-      <requiredOnInput>false</requiredOnInput>
+      <requiredOnInput>true</requiredOnInput>
     </Property>
   </parameters>
 </emds.epi.impl.adapter.database.DatabaseReaderConfig>
