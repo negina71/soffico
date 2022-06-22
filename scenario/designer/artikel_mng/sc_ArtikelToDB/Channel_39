@@ -1,0 +1,62 @@
+<FileListenerConfig id="1">
+  <name>ch_csv_FileReader</name>
+  <description></description>
+  <processSenarioID>9c2019c0-9ea9-41c8-8e33-9db9bf08069c</processSenarioID>
+  <ID>39</ID>
+  <revisionNumber>1655925258070</revisionNumber>
+  <groupId>6</groupId>
+  <autoDeleteFlag>false</autoDeleteFlag>
+  <importRevision>0</importRevision>
+  <channelTypeName>File.Inbound</channelTypeName>
+  <numberOfInstances>1</numberOfInstances>
+  <defaultOperation id="2">9c2019c0-9ea9-41c8-8e33-9db9bf08069c:ServiceInterface:40</defaultOperation>
+  <interfaceOperations id="3">
+    <emds.epi.decl.modell.Reference reference="2"/>
+  </interfaceOperations>
+  <isJunoChannel>false</isJunoChannel>
+  <messageDeserializerConfig class="emds.epi.impl.adapter.stream.CSVDeSerializerConfig" id="4">
+    <serializerTypeName>in.csv</serializerTypeName>
+    <parseMode>0</parseMode>
+    <encoding>ISO-8859-1</encoding>
+    <separator>;</separator>
+    <quoteChar></quoteChar>
+    <skip>1</skip>
+    <msgTypeRef id="5">9c2019c0-9ea9-41c8-8e33-9db9bf08069c:MessageType:41</msgTypeRef>
+    <dynamicColumnLookup>false</dynamicColumnLookup>
+    <headerNames id="6"/>
+    <elementNames id="7"/>
+    <skipEmptyFields>false</skipEmptyFields>
+  </messageDeserializerConfig>
+  <inboundSteps id="8"/>
+  <outboundSteps id="9"/>
+  <workSuffix>wrk</workSuffix>
+  <checkForWorkFilesOnStartup>false</checkForWorkFilesOnStartup>
+  <pattern>^[A-Z]{4}+[\d]{14}_[\d]{17}+.csv$</pattern>
+  <simplePattern>false</simplePattern>
+  <pollingDuration id="10">
+    <unit>SECOND</unit>
+    <value>10</value>
+  </pollingDuration>
+  <pollingPeriod>1000</pollingPeriod>
+  <timing class="emds.epi.decl.server.timer.PeriodicallyTimer" id="11">
+    <description>PeriodicallyTiming</description>
+    <preserveEvents>false</preserveEvents>
+    <dayMask>255</dayMask>
+    <repeatCount>-1</repeatCount>
+    <repeatInterval reference="10"/>
+  </timing>
+  <sortFunction></sortFunction>
+  <descending>false</descending>
+  <sortMode>0</sortMode>
+  <directoryRef id="12">9c2019c0-9ea9-41c8-8e33-9db9bf08069c:EnvironmentEntry:38</directoryRef>
+  <processAction>0</processAction>
+  <okSuffix>ok</okSuffix>
+  <errProcessAction>0</errProcessAction>
+  <errorSuffix>err</errorSuffix>
+  <returnBinaryContent>false</returnBinaryContent>
+  <synchronousDelivery>false</synchronousDelivery>
+  <cleanupDuration id="13">
+    <unit>SECOND</unit>
+    <value>1</value>
+  </cleanupDuration>
+</FileListenerConfig>
