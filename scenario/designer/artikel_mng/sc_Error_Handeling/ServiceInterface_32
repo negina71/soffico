@@ -1,0 +1,47 @@
+<emds.epi.decl.modell.ServiceInterface id="1">
+  <name>DEFAULT_INTERFACE</name>
+  <processSenarioID>8b1919ea-6be3-42a8-98b2-33a0705c9d9b</processSenarioID>
+  <ID>32</ID>
+  <revisionNumber>1656065058009</revisionNumber>
+  <groupId>11</groupId>
+  <autoDeleteFlag>false</autoDeleteFlag>
+  <importRevision>0</importRevision>
+  <exchangePattern>REQUEST</exchangePattern>
+  <parameters id="2">
+    <Property id="3">
+      <name>ATTACHMENT</name>
+      <type class="ArgumentType">message</type>
+      <usagePattern>INPUT</usagePattern>
+      <description>single attachment</description>
+      <requiredOnInput>false</requiredOnInput>
+    </Property>
+    <Property id="4">
+      <name>ATTACHMENTNAME</name>
+      <type class="SimpleType">string</type>
+      <usagePattern>INPUT</usagePattern>
+      <description>Filename of single attachment</description>
+      <requiredOnInput>false</requiredOnInput>
+    </Property>
+    <Property id="5">
+      <name>receiver</name>
+      <type class="SimpleType">string</type>
+      <usagePattern>INPUT</usagePattern>
+      <description>Receiver</description>
+      <requiredOnInput>true</requiredOnInput>
+    </Property>
+    <Property id="6">
+      <name>sender</name>
+      <type class="SimpleType">string</type>
+      <usagePattern>INPUT</usagePattern>
+      <description>Sender</description>
+      <requiredOnInput>true</requiredOnInput>
+    </Property>
+    <Property id="7">
+      <name>body</name>
+      <type class="SimpleType">string</type>
+      <usagePattern>INPUT</usagePattern>
+      <description>Parameter for Bodytext</description>
+      <requiredOnInput>true</requiredOnInput>
+    </Property>
+  </parameters>
+</emds.epi.decl.modell.ServiceInterface>

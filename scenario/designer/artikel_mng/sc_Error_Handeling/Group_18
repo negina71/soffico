@@ -1,0 +1,10 @@
+<Group id="1">
+  <name>REST Service Client</name>
+  <processSenarioID>8b1919ea-6be3-42a8-98b2-33a0705c9d9b</processSenarioID>
+  <ID>18</ID>
+  <revisionNumber>0</revisionNumber>
+  <groupId>-1</groupId>
+  <autoDeleteFlag>false</autoDeleteFlag>
+  <importRevision>0</importRevision>
+  <memberTypeName>RestServiceClient</memberTypeName>
+</Group>
