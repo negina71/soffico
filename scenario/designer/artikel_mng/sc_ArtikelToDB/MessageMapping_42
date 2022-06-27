@@ -3,7 +3,7 @@
   <description></description>
   <processSenarioID>9c2019c0-9ea9-41c8-8e33-9db9bf08069c</processSenarioID>
   <ID>42</ID>
-  <revisionNumber>1655925682494</revisionNumber>
+  <revisionNumber>1656009586200</revisionNumber>
   <groupId>4</groupId>
   <autoDeleteFlag>false</autoDeleteFlag>
   <importRevision>0</importRevision>
@@ -38,7 +38,9 @@
 $MSG/artikel/ARTIKELNAME = asString($SRC/src:line/src:column1).trim();
 $MSG/artikel/HERSTELLER = asString($SRC/src:line/src:column2).trim();
 $MSG/artikel/PREIS = asString($SRC/src:line/src:column3).trim();
-$MSG/artikel/MENGE = asString($SRC/src:line/src:column4).trim();</scriptText>
+$MSG/artikel/MENGE = asString($SRC/src:line/src:column4).trim();
+
+</scriptText>
   <parallelExecution>false</parallelExecution>
   <useTypedTarget>true</useTypedTarget>
   <isXPathValidationEnabled>true</isXPathValidationEnabled>

@@ -3,7 +3,7 @@
   <description></description>
   <processSenarioID>9c2019c0-9ea9-41c8-8e33-9db9bf08069c</processSenarioID>
   <ID>24</ID>
-  <revisionNumber>1655844035857</revisionNumber>
+  <revisionNumber>1656315683134</revisionNumber>
   <groupId>5</groupId>
   <autoDeleteFlag>false</autoDeleteFlag>
   <importRevision>0</importRevision>
@@ -127,7 +127,7 @@
       <inAssignments id="28"/>
       <outAssignments id="29"/>
       <xpos>60.0</xpos>
-      <ypos>210.0</ypos>
+      <ypos>240.0</ypos>
       <width>120.0</width>
       <height>40.0</height>
       <channelRef id="30">9c2019c0-9ea9-41c8-8e33-9db9bf08069c:Channel:29</channelRef>
@@ -154,26 +154,58 @@
       <width>80.0</width>
       <height>40.0</height>
       <namespaceContext id="36"/>
-      <intermediateEvents id="37"/>
+      <intermediateEvents id="37">
+        <EventIntermediate id="38">
+          <processModel reference="1"/>
+          <id>136</id>
+          <displayText>Error</displayText>
+          <inAssignments id="39"/>
+          <outAssignments id="40">
+            <Assignment id="41">
+              <targetPropertyName>ERROR</targetPropertyName>
+              <sourceExpr id="42">
+                <expression>ERROR</expression>
+                <implementingLanguage>Java</implementingLanguage>
+              </sourceExpr>
+            </Assignment>
+          </outAssignments>
+          <xpos>630.0</xpos>
+          <ypos>60.0</ypos>
+          <width>20.0</width>
+          <height>20.0</height>
+          <trigger class="ErrorTrigger" id="43">
+            <errorCode>GENERAL_ERROR</errorCode>
+            <properties id="44">
+              <Property id="45">
+                <name>ERROR</name>
+                <type class="ComplexType" id="46">error</type>
+                <usagePattern>OUTPUT</usagePattern>
+                <requiredOnInput>false</requiredOnInput>
+              </Property>
+            </properties>
+          </trigger>
+          <targetActivity class="emds.epi.decl.modell.process.ServiceTask" reference="31"/>
+        </EventIntermediate>
+      </intermediateEvents>
       <transactionMode>ACTIVITY_USE_ACTIVE_OR_ATTACH</transactionMode>
       <retryCount>3</retryCount>
-      <retryDelay id="38">
+      <retryDelay id="47">
         <unit>SECOND</unit>
         <value>10</value>
       </retryDelay>
       <userDefined>false</userDefined>
       <messageSizeStrategy>0</messageSizeStrategy>
-      <operation id="39">9c2019c0-9ea9-41c8-8e33-9db9bf08069c:ServiceInterface:36</operation>
-      <channel id="40">9c2019c0-9ea9-41c8-8e33-9db9bf08069c:Channel:35</channel>
-      <properties id="41">
-        <Property id="42">
+      <operation id="48">9c2019c0-9ea9-41c8-8e33-9db9bf08069c:ServiceInterface:36</operation>
+      <channel id="49">9c2019c0-9ea9-41c8-8e33-9db9bf08069c:Channel:35</channel>
+      <properties id="50">
+        <Property id="51">
           <name>MSG</name>
           <type class="ArgumentType">message</type>
           <usagePattern>INPUT</usagePattern>
           <description>source message</description>
           <requiredOnInput>true</requiredOnInput>
         </Property>
-        <Property id="43">
+        <Property id="52">
           <name>STATE</name>
           <type class="SimpleType">string</type>
           <usagePattern>OUTPUT</usagePattern>
@@ -182,51 +214,83 @@
         </Property>
       </properties>
     </emds.epi.decl.modell.process.ServiceTask>
-    <emds.epi.decl.modell.process.ScriptTask id="44">
+    <emds.epi.decl.modell.process.ScriptTask id="53">
       <processModel reference="1"/>
       <id>111</id>
       <displayText>init</displayText>
-      <inAssignments id="45">
-        <Assignment id="46">
+      <inAssignments id="54">
+        <Assignment id="55">
           <targetPropertyName>TIMESTAMP</targetPropertyName>
-          <sourceExpr id="47">
+          <sourceExpr id="56">
             <expression>CURMSG.getProperties().get(&quot;CREATIONDATETIME&quot;)</expression>
             <implementingLanguage>Java</implementingLanguage>
           </sourceExpr>
         </Assignment>
-        <Assignment id="48">
+        <Assignment id="57">
           <targetPropertyName>UUID</targetPropertyName>
-          <sourceExpr id="49">
+          <sourceExpr id="58">
             <expression>generateIdentifier(&quot;UUID&quot;).replaceAll(&quot;[^0-9UUID]&quot;,&quot;&quot;)</expression>
             <implementingLanguage>Java</implementingLanguage>
           </sourceExpr>
         </Assignment>
       </inAssignments>
-      <outAssignments id="50">
-        <Assignment id="51">
+      <outAssignments id="59">
+        <Assignment id="60">
           <targetPropertyName>TIMESTAMP</targetPropertyName>
-          <sourceExpr id="52">
+          <sourceExpr id="61">
             <expression>TIMESTAMP</expression>
             <implementingLanguage>Java</implementingLanguage>
           </sourceExpr>
         </Assignment>
-        <Assignment id="53">
+        <Assignment id="62">
           <targetPropertyName>UUID</targetPropertyName>
-          <sourceExpr id="54">
+          <sourceExpr id="63">
             <expression>UUID</expression>
             <implementingLanguage>Java</implementingLanguage>
           </sourceExpr>
         </Assignment>
       </outAssignments>
-      <xpos>160.0</xpos>
+      <xpos>210.0</xpos>
       <ypos>70.0</ypos>
       <width>80.0</width>
       <height>40.0</height>
-      <namespaceContext id="55"/>
-      <intermediateEvents id="56"/>
+      <namespaceContext id="64"/>
+      <intermediateEvents id="65">
+        <EventIntermediate id="66">
+          <processModel reference="1"/>
+          <id>133</id>
+          <displayText>Error</displayText>
+          <inAssignments id="67"/>
+          <outAssignments id="68">
+            <Assignment id="69">
+              <targetPropertyName>ERROR</targetPropertyName>
+              <sourceExpr id="70">
+                <expression>ERROR</expression>
+                <implementingLanguage>Java</implementingLanguage>
+              </sourceExpr>
+            </Assignment>
+          </outAssignments>
+          <xpos>260.0</xpos>
+          <ypos>60.0</ypos>
+          <width>20.0</width>
+          <height>20.0</height>
+          <trigger class="ErrorTrigger" id="71">
+            <errorCode>GENERAL_ERROR</errorCode>
+            <properties id="72">
+              <Property id="73">
+                <name>ERROR</name>
+                <type class="ComplexType" reference="46"/>
+                <usagePattern>OUTPUT</usagePattern>
+                <requiredOnInput>false</requiredOnInput>
+              </Property>
+            </properties>
+          </trigger>
+          <targetActivity class="emds.epi.decl.modell.process.ScriptTask" reference="53"/>
+        </EventIntermediate>
+      </intermediateEvents>
       <transactionMode>ACTIVITY_USE_ACTIVE_OR_ATTACH</transactionMode>
       <retryCount>3</retryCount>
-      <retryDelay id="57">
+      <retryDelay id="74">
         <unit>SECOND</unit>
         <value>10</value>
       </retryDelay>
@@ -240,14 +304,14 @@
 </script>
       <imports>
 	</imports>
-      <parameters class="linked-list" id="58">
-        <Property id="59">
+      <parameters class="linked-list" id="75">
+        <Property id="76">
           <name>TIMESTAMP</name>
           <type class="SimpleType">string</type>
           <usagePattern>IN_OUT</usagePattern>
           <requiredOnInput>false</requiredOnInput>
         </Property>
-        <Property id="60">
+        <Property id="77">
           <name>UUID</name>
           <type class="SimpleType">string</type>
           <usagePattern>IN_OUT</usagePattern>
@@ -257,38 +321,38 @@
       <scriptID>EmptyScript</scriptID>
       <description>A plain script</description>
     </emds.epi.decl.modell.process.ScriptTask>
-    <ExternalSystem id="61">
+    <ExternalSystem id="78">
       <processModel reference="1"/>
       <id>117</id>
       <displayText>ch_WriteToDB</displayText>
-      <inAssignments id="62"/>
-      <outAssignments id="63"/>
+      <inAssignments id="79"/>
+      <outAssignments id="80"/>
       <xpos>560.0</xpos>
       <ypos>210.0</ypos>
       <width>120.0</width>
       <height>40.0</height>
-      <channelRef id="64">9c2019c0-9ea9-41c8-8e33-9db9bf08069c:Channel:35</channelRef>
+      <channelRef id="81">9c2019c0-9ea9-41c8-8e33-9db9bf08069c:Channel:35</channelRef>
       <isInbound>false</isInbound>
       <isOutbound>true</isOutbound>
       <role>Channel</role>
     </ExternalSystem>
-    <ActivityMapping id="65">
+    <ActivityMapping id="82">
       <processModel reference="1"/>
       <id>123</id>
       <displayText>map mm_artikelToDB</displayText>
-      <inAssignments id="66">
-        <Assignment id="67">
+      <inAssignments id="83">
+        <Assignment id="84">
           <targetPropertyName>MSG</targetPropertyName>
-          <sourceExpr id="68">
+          <sourceExpr id="85">
             <expression>CURMSG</expression>
             <implementingLanguage>Java</implementingLanguage>
           </sourceExpr>
         </Assignment>
       </inAssignments>
-      <outAssignments id="69">
-        <Assignment id="70">
+      <outAssignments id="86">
+        <Assignment id="87">
           <targetPropertyName>CURMSG</targetPropertyName>
-          <sourceExpr id="71">
+          <sourceExpr id="88">
             <expression>MSG</expression>
             <implementingLanguage>Java</implementingLanguage>
           </sourceExpr>
@@ -298,25 +362,57 @@
       <ypos>70.0</ypos>
       <width>140.0</width>
       <height>40.0</height>
-      <namespaceContext id="72"/>
-      <intermediateEvents id="73"/>
+      <namespaceContext id="89"/>
+      <intermediateEvents id="90">
+        <EventIntermediate id="91">
+          <processModel reference="1"/>
+          <id>135</id>
+          <displayText>Error</displayText>
+          <inAssignments id="92"/>
+          <outAssignments id="93">
+            <Assignment id="94">
+              <targetPropertyName>ERROR</targetPropertyName>
+              <sourceExpr id="95">
+                <expression>ERROR</expression>
+                <implementingLanguage>Java</implementingLanguage>
+              </sourceExpr>
+            </Assignment>
+          </outAssignments>
+          <xpos>490.0</xpos>
+          <ypos>60.0</ypos>
+          <width>20.0</width>
+          <height>20.0</height>
+          <trigger class="ErrorTrigger" id="96">
+            <errorCode>GENERAL_ERROR</errorCode>
+            <properties id="97">
+              <Property id="98">
+                <name>ERROR</name>
+                <type class="ComplexType" reference="46"/>
+                <usagePattern>OUTPUT</usagePattern>
+                <requiredOnInput>false</requiredOnInput>
+              </Property>
+            </properties>
+          </trigger>
+          <targetActivity class="ActivityMapping" reference="82"/>
+        </EventIntermediate>
+      </intermediateEvents>
       <transactionMode>ACTIVITY_USE_ACTIVE_OR_ATTACH</transactionMode>
       <retryCount>3</retryCount>
-      <retryDelay id="74">
+      <retryDelay id="99">
         <unit>SECOND</unit>
         <value>10</value>
       </retryDelay>
       <userDefined>false</userDefined>
       <messageSizeStrategy>0</messageSizeStrategy>
-      <m__mapping id="75">9c2019c0-9ea9-41c8-8e33-9db9bf08069c:MessageMapping:34</m__mapping>
-      <properties id="76">
-        <Property id="77">
+      <m__mapping id="100">9c2019c0-9ea9-41c8-8e33-9db9bf08069c:MessageMapping:34</m__mapping>
+      <properties id="101">
+        <Property id="102">
           <name>MSG</name>
           <type class="ArgumentType">message</type>
           <usagePattern>INPUT</usagePattern>
           <requiredOnInput>false</requiredOnInput>
         </Property>
-        <Property id="78">
+        <Property id="103">
           <name>MSG</name>
           <type class="ArgumentType">message</type>
           <usagePattern>OUTPUT</usagePattern>
@@ -324,38 +420,70 @@
         </Property>
       </properties>
     </ActivityMapping>
-    <emds.epi.decl.modell.process.ScriptTask id="79">
+    <emds.epi.decl.modell.process.ScriptTask id="104">
       <processModel reference="1"/>
       <id>126</id>
       <displayText>Deserialize binary message</displayText>
-      <inAssignments id="80">
-        <Assignment id="81">
+      <inAssignments id="105">
+        <Assignment id="106">
           <targetPropertyName>MSG</targetPropertyName>
-          <sourceExpr id="82">
+          <sourceExpr id="107">
             <expression>CURMSG</expression>
             <implementingLanguage>Java</implementingLanguage>
           </sourceExpr>
         </Assignment>
-        <Assignment id="83">
+        <Assignment id="108">
           <targetPropertyName>MASSDATA</targetPropertyName>
-          <sourceExpr id="84">
+          <sourceExpr id="109">
             <expression>false</expression>
             <implementingLanguage>Java</implementingLanguage>
           </sourceExpr>
         </Assignment>
       </inAssignments>
-      <outAssignments id="85">
-        <Assignment reference="70"/>
+      <outAssignments id="110">
+        <Assignment reference="87"/>
       </outAssignments>
-      <xpos>230.0</xpos>
-      <ypos>150.0</ypos>
+      <xpos>160.0</xpos>
+      <ypos>160.0</ypos>
       <width>180.0</width>
       <height>40.0</height>
-      <namespaceContext id="86"/>
-      <intermediateEvents id="87"/>
+      <namespaceContext id="111"/>
+      <intermediateEvents id="112">
+        <EventIntermediate id="113">
+          <processModel reference="1"/>
+          <id>134</id>
+          <displayText>Error</displayText>
+          <inAssignments id="114"/>
+          <outAssignments id="115">
+            <Assignment id="116">
+              <targetPropertyName>ERROR</targetPropertyName>
+              <sourceExpr id="117">
+                <expression>ERROR</expression>
+                <implementingLanguage>Java</implementingLanguage>
+              </sourceExpr>
+            </Assignment>
+          </outAssignments>
+          <xpos>310.0</xpos>
+          <ypos>150.0</ypos>
+          <width>20.0</width>
+          <height>20.0</height>
+          <trigger class="ErrorTrigger" id="118">
+            <errorCode>GENERAL_ERROR</errorCode>
+            <properties id="119">
+              <Property id="120">
+                <name>ERROR</name>
+                <type class="ComplexType" reference="46"/>
+                <usagePattern>OUTPUT</usagePattern>
+                <requiredOnInput>false</requiredOnInput>
+              </Property>
+            </properties>
+          </trigger>
+          <targetActivity class="emds.epi.decl.modell.process.ScriptTask" reference="104"/>
+        </EventIntermediate>
+      </intermediateEvents>
       <transactionMode>ACTIVITY_USE_ACTIVE_OR_ATTACH</transactionMode>
       <retryCount>3</retryCount>
-      <retryDelay id="88">
+      <retryDelay id="121">
         <unit>SECOND</unit>
         <value>10</value>
       </retryDelay>
@@ -371,15 +499,15 @@ MSG=MessageConverter.convertBinaryMessage( getScenarioIdentifier(),
       <imports>
 import emds.epi.impl.messagestore.scriptlet.MessageConverter;
 </imports>
-      <parameters class="linked-list" id="89">
-        <Property id="90">
+      <parameters class="linked-list" id="122">
+        <Property id="123">
           <name>MSG</name>
           <type class="ArgumentType">message</type>
           <usagePattern>IN_OUT</usagePattern>
           <description>binary message to convert</description>
           <requiredOnInput>true</requiredOnInput>
         </Property>
-        <Property id="91">
+        <Property id="124">
           <name>MASSDATA</name>
           <type class="SimpleType">boolean</type>
           <usagePattern>INPUT</usagePattern>
@@ -387,63 +515,210 @@ import emds.epi.impl.messagestore.scriptlet.MessageConverter;
           <requiredOnInput>true</requiredOnInput>
         </Property>
       </parameters>
-      <extConfiguration class="emds.epi.impl.messagestore.scriptlet.MessageConverterConfig" id="92">
-        <messageDeserializerConfig class="emds.epi.impl.adapter.stream.XMLDeSerializerConfig" id="93">
+      <extConfiguration class="emds.epi.impl.messagestore.scriptlet.MessageConverterConfig" id="125">
+        <messageDeserializerConfig class="emds.epi.impl.adapter.stream.XMLDeSerializerConfig" id="126">
           <serializerTypeName>in.xml</serializerTypeName>
           <parseMode>0</parseMode>
           <ignoreTrailingText>false</ignoreTrailingText>
           <ignoreDoctype>false</ignoreDoctype>
         </messageDeserializerConfig>
-        <inboundSteps id="94"/>
+        <inboundSteps id="127"/>
       </extConfiguration>
       <scriptID>BinaryMessageConverter</scriptID>
       <description>Converts a binary message to a structured message using a deserializer</description>
     </emds.epi.decl.modell.process.ScriptTask>
+    <EventIntermediate reference="66"/>
+    <EventIntermediate reference="113"/>
+    <EventIntermediate reference="91"/>
+    <EventIntermediate reference="38"/>
+    <EventIntermediate id="128">
+      <processModel reference="1"/>
+      <id>156</id>
+      <displayText>throw</displayText>
+      <inAssignments id="129">
+        <Assignment id="130">
+          <targetPropertyName>OWNER</targetPropertyName>
+          <sourceExpr id="131">
+            <expression>getOwnerName()</expression>
+            <implementingLanguage>Java</implementingLanguage>
+          </sourceExpr>
+        </Assignment>
+        <Assignment id="132">
+          <targetPropertyName>TIMESTAMP</targetPropertyName>
+          <sourceExpr id="133">
+            <expression>TIMESTAMP</expression>
+            <implementingLanguage>Java</implementingLanguage>
+          </sourceExpr>
+        </Assignment>
+        <Assignment id="134">
+          <targetPropertyName>SCENARIONAME</targetPropertyName>
+          <sourceExpr id="135">
+            <expression>getScenarioName()</expression>
+            <implementingLanguage>Java</implementingLanguage>
+          </sourceExpr>
+        </Assignment>
+        <Assignment id="136">
+          <targetPropertyName>errMsg</targetPropertyName>
+          <sourceExpr id="137">
+            <expression>ERROR.getErrorMessage()</expression>
+            <implementingLanguage>Java</implementingLanguage>
+          </sourceExpr>
+        </Assignment>
+        <Assignment id="138">
+          <targetPropertyName>ERROR</targetPropertyName>
+          <sourceExpr id="139">
+            <expression>ERROR</expression>
+            <implementingLanguage>Java</implementingLanguage>
+          </sourceExpr>
+        </Assignment>
+        <Assignment id="140">
+          <targetPropertyName>UUID</targetPropertyName>
+          <sourceExpr id="141">
+            <expression>UUID</expression>
+            <implementingLanguage>Java</implementingLanguage>
+          </sourceExpr>
+        </Assignment>
+        <Assignment id="142">
+          <targetPropertyName>SENDTYPE</targetPropertyName>
+          <sourceExpr id="143">
+            <expression>getGlobalVariable(&quot;gv_errorMailReceiver&quot;)</expression>
+            <implementingLanguage>Java</implementingLanguage>
+          </sourceExpr>
+        </Assignment>
+      </inAssignments>
+      <outAssignments id="144"/>
+      <xpos>750.0</xpos>
+      <ypos>20.0</ypos>
+      <width>20.0</width>
+      <height>20.0</height>
+      <namespaceContext id="145"/>
+      <trigger class="emds.epi.decl.modell.process.SignalTrigger" id="146">
+        <serviceInterface id="147">9c2019c0-9ea9-41c8-8e33-9db9bf08069c:ServiceInterface:43</serviceInterface>
+        <parameters id="148">
+          <Property id="149">
+            <name>SCENARIONAME</name>
+            <type class="SimpleType">string</type>
+            <usagePattern>INPUT</usagePattern>
+            <requiredOnInput>false</requiredOnInput>
+          </Property>
+          <Property id="150">
+            <name>OWNER</name>
+            <type class="SimpleType">string</type>
+            <usagePattern>INPUT</usagePattern>
+            <requiredOnInput>false</requiredOnInput>
+          </Property>
+          <Property id="151">
+            <name>ERROR</name>
+            <type class="ComplexType" reference="46"/>
+            <usagePattern>INPUT</usagePattern>
+            <requiredOnInput>false</requiredOnInput>
+          </Property>
+          <Property id="152">
+            <name>TIMESTAMP</name>
+            <type class="SimpleType">string</type>
+            <usagePattern>INPUT</usagePattern>
+            <requiredOnInput>false</requiredOnInput>
+          </Property>
+          <Property id="153">
+            <name>SENDTYPE</name>
+            <type class="SimpleType">string</type>
+            <usagePattern>INPUT</usagePattern>
+            <requiredOnInput>true</requiredOnInput>
+          </Property>
+          <Property id="154">
+            <name>UUID</name>
+            <type class="SimpleType">string</type>
+            <usagePattern>INPUT</usagePattern>
+            <requiredOnInput>true</requiredOnInput>
+          </Property>
+          <Property id="155">
+            <name>errMsg</name>
+            <type class="SimpleType">string</type>
+            <usagePattern>INPUT</usagePattern>
+            <requiredOnInput>false</requiredOnInput>
+          </Property>
+        </parameters>
+        <isThrowing>true</isThrowing>
+        <isDurable>false</isDurable>
+        <wantRecipientList>false</wantRecipientList>
+      </trigger>
+    </EventIntermediate>
+    <EventEnd id="156">
+      <processModel reference="1"/>
+      <id>157</id>
+      <displayText>Error</displayText>
+      <inAssignments id="157">
+        <Assignment id="158">
+          <targetPropertyName>ERROR</targetPropertyName>
+          <sourceExpr id="159">
+            <expression>ERROR</expression>
+            <implementingLanguage>Java</implementingLanguage>
+          </sourceExpr>
+        </Assignment>
+      </inAssignments>
+      <outAssignments id="160"/>
+      <xpos>820.0</xpos>
+      <ypos>20.0</ypos>
+      <width>20.0</width>
+      <height>20.0</height>
+      <namespaceContext id="161"/>
+      <m__eventResult class="ErrorResult" id="162">
+        <properties id="163">
+          <Property id="164">
+            <name>ERROR</name>
+            <type class="ComplexType" reference="46"/>
+            <usagePattern>INPUT</usagePattern>
+            <requiredOnInput>false</requiredOnInput>
+          </Property>
+        </properties>
+        <errorCode>GENERAL_ERROR</errorCode>
+      </m__eventResult>
+    </EventEnd>
   </processObjects>
-  <annotations id="95"/>
-  <edges id="96">
-    <EdgeMessage id="97">
+  <annotations id="165"/>
+  <edges id="166">
+    <EdgeMessage id="167">
       <processModel reference="1"/>
       <id>109</id>
-      <m__arNode id="98">
+      <m__arNode id="168">
         <ExternalSystem reference="27"/>
         <EventStart reference="10"/>
       </m__arNode>
     </EdgeMessage>
-    <EdgeSequence id="99">
+    <EdgeSequence id="169">
       <processModel reference="1"/>
       <id>113</id>
-      <m__arNode id="100">
+      <m__arNode id="170">
         <EventStart reference="10"/>
-        <emds.epi.decl.modell.process.ScriptTask reference="44"/>
+        <emds.epi.decl.modell.process.ScriptTask reference="53"/>
       </m__arNode>
       <bentStyle>STRAIGHT</bentStyle>
       <defaultEdge>false</defaultEdge>
       <showAsEdgeLabel>false</showAsEdgeLabel>
     </EdgeSequence>
-    <EdgeSequence id="101">
+    <EdgeSequence id="171">
       <processModel reference="1"/>
       <id>115</id>
-      <m__arNode id="102">
-        <emds.epi.decl.modell.process.ScriptTask reference="44"/>
-        <emds.epi.decl.modell.process.ScriptTask reference="79"/>
+      <m__arNode id="172">
+        <emds.epi.decl.modell.process.ScriptTask reference="53"/>
+        <emds.epi.decl.modell.process.ScriptTask reference="104"/>
       </m__arNode>
       <bentStyle>VH</bentStyle>
       <defaultEdge>false</defaultEdge>
       <showAsEdgeLabel>false</showAsEdgeLabel>
     </EdgeSequence>
-    <EdgeMessage id="103">
+    <EdgeMessage id="173">
       <processModel reference="1"/>
       <id>119</id>
-      <m__arNode id="104">
+      <m__arNode id="174">
         <emds.epi.decl.modell.process.ServiceTask reference="31"/>
-        <ExternalSystem reference="61"/>
+        <ExternalSystem reference="78"/>
       </m__arNode>
     </EdgeMessage>
-    <EdgeSequence id="105">
+    <EdgeSequence id="175">
       <processModel reference="1"/>
       <id>121</id>
-      <m__arNode id="106">
+      <m__arNode id="176">
         <emds.epi.decl.modell.process.ServiceTask reference="31"/>
         <EventEnd reference="7"/>
       </m__arNode>
@@ -451,58 +726,113 @@ import emds.epi.impl.messagestore.scriptlet.MessageConverter;
       <defaultEdge>false</defaultEdge>
       <showAsEdgeLabel>false</showAsEdgeLabel>
     </EdgeSequence>
-    <EdgeSequence id="107">
+    <EdgeSequence id="177">
       <processModel reference="1"/>
       <id>125</id>
-      <m__arNode id="108">
-        <ActivityMapping reference="65"/>
+      <m__arNode id="178">
+        <ActivityMapping reference="82"/>
         <emds.epi.decl.modell.process.ServiceTask reference="31"/>
       </m__arNode>
       <bentStyle>STRAIGHT</bentStyle>
       <defaultEdge>false</defaultEdge>
       <showAsEdgeLabel>false</showAsEdgeLabel>
     </EdgeSequence>
-    <EdgeSequence id="109">
+    <EdgeSequence id="179">
       <processModel reference="1"/>
       <id>129</id>
-      <m__arNode id="110">
-        <emds.epi.decl.modell.process.ScriptTask reference="79"/>
-        <ActivityMapping reference="65"/>
+      <m__arNode id="180">
+        <emds.epi.decl.modell.process.ScriptTask reference="104"/>
+        <ActivityMapping reference="82"/>
       </m__arNode>
       <bentStyle>HV</bentStyle>
       <defaultEdge>false</defaultEdge>
       <showAsEdgeLabel>false</showAsEdgeLabel>
     </EdgeSequence>
+    <EdgeSequence id="181">
+      <processModel reference="1"/>
+      <id>149</id>
+      <m__arNode id="182">
+        <EventIntermediate reference="38"/>
+        <EventIntermediate reference="128"/>
+      </m__arNode>
+      <bentStyle>VH</bentStyle>
+      <defaultEdge>false</defaultEdge>
+      <showAsEdgeLabel>false</showAsEdgeLabel>
+    </EdgeSequence>
+    <EdgeSequence id="183">
+      <processModel reference="1"/>
+      <id>151</id>
+      <m__arNode id="184">
+        <EventIntermediate reference="91"/>
+        <EventIntermediate reference="128"/>
+      </m__arNode>
+      <bentStyle>VH</bentStyle>
+      <defaultEdge>false</defaultEdge>
+      <showAsEdgeLabel>false</showAsEdgeLabel>
+    </EdgeSequence>
+    <EdgeSequence id="185">
+      <processModel reference="1"/>
+      <id>153</id>
+      <m__arNode id="186">
+        <EventIntermediate reference="66"/>
+        <EventIntermediate reference="128"/>
+      </m__arNode>
+      <bentStyle>VH</bentStyle>
+      <defaultEdge>false</defaultEdge>
+      <showAsEdgeLabel>false</showAsEdgeLabel>
+    </EdgeSequence>
+    <EdgeSequence id="187">
+      <processModel reference="1"/>
+      <id>155</id>
+      <m__arNode id="188">
+        <EventIntermediate reference="113"/>
+        <EventIntermediate reference="128"/>
+      </m__arNode>
+      <bentStyle>VH</bentStyle>
+      <defaultEdge>false</defaultEdge>
+      <showAsEdgeLabel>false</showAsEdgeLabel>
+    </EdgeSequence>
+    <EdgeSequence id="189">
+      <processModel reference="1"/>
+      <id>159</id>
+      <m__arNode id="190">
+        <EventIntermediate reference="128"/>
+        <EventEnd reference="156"/>
+      </m__arNode>
+      <bentStyle>STRAIGHT</bentStyle>
+      <defaultEdge>false</defaultEdge>
+      <showAsEdgeLabel>false</showAsEdgeLabel>
+    </EdgeSequence>
   </edges>
-  <properties class="linked-list" id="111">
-    <Property id="112">
+  <properties class="linked-list" id="191">
+    <Property id="192">
       <name>CURMSG</name>
       <type class="ArgumentType">message</type>
       <usagePattern>LOCAL</usagePattern>
       <description>current message</description>
       <requiredOnInput>false</requiredOnInput>
     </Property>
-    <Property id="113">
+    <Property id="193">
       <name>ERROR</name>
-      <type class="ComplexType" id="114">error</type>
+      <type class="ComplexType" reference="46"/>
       <usagePattern>LOCAL</usagePattern>
       <description>Error information object</description>
       <requiredOnInput>false</requiredOnInput>
     </Property>
     <Property reference="4"/>
-    <Property id="115">
+    <Property id="194">
       <name>TIMESTAMP</name>
       <type class="SimpleType">string</type>
       <usagePattern>LOCAL</usagePattern>
       <requiredOnInput>false</requiredOnInput>
     </Property>
     <Property reference="5"/>
-    <Property id="116">
+    <Property id="195">
       <name>FILENAME_OUT</name>
       <type class="SimpleType">string</type>
       <usagePattern>LOCAL</usagePattern>
       <requiredOnInput>false</requiredOnInput>
     </Property>
   </properties>
-  <maxElementId>132</maxElementId>
+  <maxElementId>159</maxElementId>
 </ProcessModel>

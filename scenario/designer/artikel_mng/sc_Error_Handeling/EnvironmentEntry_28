@@ -1,0 +1,23 @@
+<emds.epi.impl.adapter.email.EmailServer id="1">
+  <name>ee_sendEmail</name>
+  <description></description>
+  <processSenarioID>8b1919ea-6be3-42a8-98b2-33a0705c9d9b</processSenarioID>
+  <ID>28</ID>
+  <revisionNumber>1656064872197</revisionNumber>
+  <groupId>9</groupId>
+  <autoDeleteFlag>false</autoDeleteFlag>
+  <importRevision>0</importRevision>
+  <entryTypeName>EMail server connection</entryTypeName>
+  <isOriginal>true</isOriginal>
+  <useRuntimeLink>false</useRuntimeLink>
+  <usage>send</usage>
+  <host>smtp.uibk.ac.at</host>
+  <fetchProtocol>pop3</fetchProtocol>
+  <useImapStartTLS>false</useImapStartTLS>
+  <useSmtpStartTLS>true</useSmtpStartTLS>
+  <fetchPort>110</fetchPort>
+  <folder>INBOX</folder>
+  <mailbox>user@example.xyz</mailbox>
+  <sendProtocol>smtp</sendProtocol>
+  <sendPort>25</sendPort>
+</emds.epi.impl.adapter.email.EmailServer>

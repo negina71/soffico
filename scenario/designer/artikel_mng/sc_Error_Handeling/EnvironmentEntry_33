@@ -1,0 +1,15 @@
+<emds.epi.decl.server.landscape.entries.GlobalVariable id="1">
+  <name>gv_sender</name>
+  <description></description>
+  <processSenarioID>8b1919ea-6be3-42a8-98b2-33a0705c9d9b</processSenarioID>
+  <ID>33</ID>
+  <revisionNumber>1656067300443</revisionNumber>
+  <groupId>9</groupId>
+  <autoDeleteFlag>false</autoDeleteFlag>
+  <importRevision>0</importRevision>
+  <entryTypeName>Global variable</entryTypeName>
+  <isOriginal>true</isOriginal>
+  <useRuntimeLink>false</useRuntimeLink>
+  <value>Negin.Ashrafi@student.uibk.ac.at</value>
+  <valueType>0</valueType>
+</emds.epi.decl.server.landscape.entries.GlobalVariable>

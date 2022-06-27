@@ -1,0 +1,13 @@
+<emds.epi.decl.modell.MediaElement id="1">
+  <name>doc</name>
+  <description>link</description>
+  <processSenarioID>8b1919ea-6be3-42a8-98b2-33a0705c9d9b</processSenarioID>
+  <ID>36</ID>
+  <revisionNumber>1656063109126</revisionNumber>
+  <groupId>10</groupId>
+  <autoDeleteFlag>false</autoDeleteFlag>
+  <importRevision>0</importRevision>
+  <mimeType>text/html</mimeType>
+  <content id="2">PGh0bWw+DQogIDxoZWFkPg0KDQogIDwvaGVhZD4NCiAgPGJvZHk+DQogICAgPHAgc3R5bGU9Im1hcmdpbi10b3A6IDAiPg0KICAgICAgaHR0cHM6Ly9zdXBwb3J0Lmdvb2dsZS5jb20vbWFpbC9hbnN3ZXIvNzEyNjIyOT9obD1kZSN6aXBweT0lMkNzY2hyaXR0LWltYXAtYWt0aXZpZXJlbiUyQ3NjaHJpdHQtc210cC0tdW5kLWFuZGVyZS1laW5zdGVsbHVuZ2VuLWltLWUtbWFpbC1jbGllbnQtJUMzJUE0bmRlcm4NCiAgICA8L3A+DQogIDwvYm9keT4NCjwvaHRtbD4NCg==</content>
+  <mediaLinks id="3"/>
+</emds.epi.decl.modell.MediaElement>

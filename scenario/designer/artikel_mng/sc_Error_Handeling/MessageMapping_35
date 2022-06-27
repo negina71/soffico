@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="no"?><mapping xmlns="http://www.emds-ag.de/namespace/" xmlns:emds="http://www.emds-ag.de/namespace/" xmlns:src="http://www.emds-ag.de/namespace/" importRevision="0" name="tm_error" scheduling="ser" targetRef="8b1919ea-6be3-42a8-98b2-33a0705c9d9b:MessageType:34" transactionOnRootLevel="0" xsiSupport="false">
+
+  <source name="empty">
+    <xsd:schema xmlns:ns1="emds:default" xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="unqualified" targetNamespace="emds:default">
+      <xsd:element id="se0" name="empty" type="xsd:string"/>
+    </xsd:schema>
+  </source>
+
+  <target name="mt_error">
+    <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <xsd:element id="te1" name="mt_error">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element id="te2" name="scenarioName" type="xsd:string" xsitype="{http://www.w3.org/2001/XMLSchema}string"/>
+            <xsd:element id="te3" name="owner" type="xsd:string" xsitype="{http://www.w3.org/2001/XMLSchema}string"/>
+            <xsd:element id="te4" name="uuid" type="xsd:string" xsitype="{http://www.w3.org/2001/XMLSchema}string"/>
+            <xsd:element id="te5" name="timestamp" type="xsd:string" xsitype="{http://www.w3.org/2001/XMLSchema}string"/>
+            <xsd:element id="te6" name="errorMsg" type="xsd:string" xsitype="{http://www.w3.org/2001/XMLSchema}string"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+  </target>
+
+    <model>
+
+      <vardef description="" name="scenarioName" required="true" type="string" usage="INPUT"/>
+
+      <vardef description="" name="owner" required="true" type="string" usage="INPUT"/>
+
+      <vardef description="" name="UUID" required="true" type="string" usage="INPUT"/>
+
+      <vardef description="" name="TIMESTAMP" required="true" type="string" usage="INPUT"/>
+
+      <vardef description="" name="errorMsg" required="true" type="string" usage="INPUT"/>
+
+      <rootMapping>
+        <varRef id="e1" type="string">scenarioName</varRef>
+        <varRef id="e2" type="string">owner</varRef>
+        <varRef id="e3" type="string">UUID</varRef>
+        <varRef id="e4" type="string">TIMESTAMP</varRef>
+        <varRef id="e5" type="string">errorMsg</varRef>
+        <map destAttr="te2" sourceExpr="e1"/>
+        <map destAttr="te3" sourceExpr="e2"/>
+        <map destAttr="te4" sourceExpr="e3"/>
+        <map destAttr="te5" sourceExpr="e4"/>
+        <map destAttr="te6" sourceExpr="e5"/>
+      </rootMapping>
+
+    </model>
+
+    <graph>
+      <typetree side="left" xpos="20" ypos="20"/>
+      <typetree side="right" xpos="900" ypos="20"/>
+      <loc id="e4" xloc="-1" xpos="343" yloc="-1" ypos="137"/>
+      <loc id="e2" xloc="-1" xpos="343" yloc="-1" ypos="91"/>
+      <loc id="e3" xloc="-1" xpos="415" yloc="-1" ypos="111"/>
+      <loc id="e5" xloc="-1" xpos="355" yloc="-1" ypos="175"/>
+      <loc id="e1" xloc="-1" xpos="346" yloc="-1" ypos="51"/>
+    </graph>
+
+  </mapping>
