@@ -26,3 +26,12 @@ ID is transferred as a Query for request and the article is returned as a respon
 Over Channel=HTTP GET RECEIVER from GROUP=HTTP.Inbound.Get will be sent a request with query ID and reseived a response Message
 </details>
 </p>
+
+**The fourth exercise of orchestra**
+<p>
+<details>
+<summary>Error Handelling</summary>
+Error reporting via file and/or mail
+</details>
+</p>
+

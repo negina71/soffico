@@ -3,7 +3,7 @@
   <description></description>
   <processSenarioID>8b1919ea-6be3-42a8-98b2-33a0705c9d9b</processSenarioID>
   <ID>30</ID>
-  <revisionNumber>1656067688249</revisionNumber>
+  <revisionNumber>1656413507505</revisionNumber>
   <groupId>5</groupId>
   <autoDeleteFlag>false</autoDeleteFlag>
   <importRevision>0</importRevision>
@@ -362,7 +362,7 @@
         <Assignment id="92">
           <targetPropertyName>TIMESTAMP</targetPropertyName>
           <sourceExpr id="93">
-            <expression>getFormattedTimestamp(&quot;yyyyMMddhhmmss&quot;)</expression>
+            <expression>getFormattedTimestamp(&quot;yyyy-MM-dd&quot;)</expression>
             <implementingLanguage>Java</implementingLanguage>
           </sourceExpr>
         </Assignment>
@@ -415,7 +415,8 @@
 /* ***************************************************************************
  * Add your own java code
  * ***************************************************************************/
-FILENAME_OUT=&quot;ERROR_&quot;+UUID+&quot;_&quot;+TIMESTAMP+&quot;.csv&quot;;</script>
+
+FILENAME_OUT=&quot;ERROR&quot;+&quot;//&quot;+TIMESTAMP+&quot;//&quot;+UUID+&quot;.csv&quot;;</script>
       <imports>
 	</imports>
       <parameters class="linked-list" id="106">
