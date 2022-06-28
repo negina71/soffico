@@ -3,13 +3,13 @@
   <description></description>
   <processSenarioID>9c2019c0-9ea9-41c8-8e33-9db9bf08069c</processSenarioID>
   <ID>44</ID>
-  <revisionNumber>1656317397414</revisionNumber>
+  <revisionNumber>1656406188710</revisionNumber>
   <groupId>9</groupId>
   <autoDeleteFlag>false</autoDeleteFlag>
   <importRevision>0</importRevision>
   <entryTypeName>Global variable</entryTypeName>
   <isOriginal>true</isOriginal>
   <useRuntimeLink>false</useRuntimeLink>
-  <value>negin.ashrafi71@gmail.com</value>
-  <valueType>1</valueType>
+  <value>negin.ashrafi71gmail.com</value>
+  <valueType>0</valueType>
 </emds.epi.decl.server.landscape.entries.GlobalVariable>

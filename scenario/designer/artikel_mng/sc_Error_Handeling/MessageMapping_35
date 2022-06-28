@@ -52,11 +52,11 @@
     <graph>
       <typetree side="left" xpos="20" ypos="20"/>
       <typetree side="right" xpos="900" ypos="20"/>
-      <loc id="e4" xloc="-1" xpos="343" yloc="-1" ypos="137"/>
-      <loc id="e2" xloc="-1" xpos="343" yloc="-1" ypos="91"/>
-      <loc id="e3" xloc="-1" xpos="415" yloc="-1" ypos="111"/>
-      <loc id="e5" xloc="-1" xpos="355" yloc="-1" ypos="175"/>
-      <loc id="e1" xloc="-1" xpos="346" yloc="-1" ypos="51"/>
+      <loc id="e3" xloc="-1" xpos="346" yloc="-1" ypos="96"/>
+      <loc id="e1" xloc="-1" xpos="346" yloc="-1" ypos="50"/>
+      <loc id="e5" xloc="-1" xpos="336" yloc="-1" ypos="142"/>
+      <loc id="e2" xloc="-1" xpos="251" yloc="-1" ypos="73"/>
+      <loc id="e4" xloc="-1" xpos="248" yloc="-1" ypos="119"/>
     </graph>
 
   </mapping>

@@ -1,6 +1,0 @@
-scenarioName;processName;erroeMSG;time;UUID
-sc_ArtikelToDB
-pm_WriteArtikelToDB
-UUID211656317921649
-20220627101841
-Max number of error retrys exceeded[(conn=8) Duplicate entry 'ART1' for key 'PRIMARY': constraint violation]

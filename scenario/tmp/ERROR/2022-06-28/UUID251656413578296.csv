@@ -1,0 +1,6 @@
+scenarioName;Owner;UUID;Time;errorMSG
+sc_ArtikelToDB
+pm_WriteArtikelToDB
+UUID251656413578296
+2022-06-28
+Max number of error retrys exceeded[(conn=33) Duplicate entry 'ART1' for key 'PRIMARY': constraint violation]
