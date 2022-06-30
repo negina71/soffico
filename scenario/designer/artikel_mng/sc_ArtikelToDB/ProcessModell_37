@@ -3,7 +3,7 @@
   <description>read csv data from local and write it to DB</description>
   <processSenarioID>9c2019c0-9ea9-41c8-8e33-9db9bf08069c</processSenarioID>
   <ID>37</ID>
-  <revisionNumber>1656317408682</revisionNumber>
+  <revisionNumber>1656584008518</revisionNumber>
   <groupId>5</groupId>
   <autoDeleteFlag>false</autoDeleteFlag>
   <importRevision>0</importRevision>

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="no"?><mapping xmlns="http://www.emds-ag.de/namespace/" xmlns:emds="http://www.emds-ag.de/namespace/" xmlns:src="http://www.emds-ag.de/namespace/" importRevision="0" name="mt_dbTabelToJSON" scheduling="ser" sourceRef="337ac2f3-75cf-42a0-8f5b-e4e7ec04b5d2:MessageType:26" targetRef="337ac2f3-75cf-42a0-8f5b-e4e7ec04b5d2:MessageType:40" transactionOnRootLevel="0" xsiSupport="false">
+
+  <source name="mt_Response_Artikel">
+    <xsd:schema xmlns:tns="urn:webservice" xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="unqualified" targetNamespace="urn:webservice">
+      <xsd:element id="se1" name="mt_Response_Artikel">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element id="se2" maxOccurs="unbounded" minOccurs="0" name="artikel" targetNamespace="">
+              <xsd:annotation>
+                <xsd:appinfo source="emdsorch:tablename">artikel</xsd:appinfo>
+              </xsd:annotation>
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element id="se3" name="ARTIKEL_ID">
+                    <xsd:annotation>
+                      <xsd:appinfo source="emdsorch:columnname">ARTIKEL_ID</xsd:appinfo>
+                      <xsd:appinfo source="emdsorch:dbtypename">VARCHAR</xsd:appinfo>
+                      <xsd:appinfo source="emdsorch:usage">insertOnly</xsd:appinfo>
+                    </xsd:annotation>
+                    <xsd:simpleType>
+                      <xsd:restriction base="xsd:string">
+                        <xsd:maxLength value="20"/>
+                      </xsd:restriction>
+                    </xsd:simpleType>
+                  </xsd:element>
+                  <xsd:element id="se4" name="ARTIKELNAME">
+                    <xsd:annotation>
+                      <xsd:appinfo source="emdsorch:columnname">ARTIKELNAME</xsd:appinfo>
+                      <xsd:appinfo source="emdsorch:dbtypename">VARCHAR</xsd:appinfo>
+                    </xsd:annotation>
+                    <xsd:simpleType>
+                      <xsd:restriction base="xsd:string">
+                        <xsd:maxLength value="30"/>
+                      </xsd:restriction>
+                    </xsd:simpleType>
+                  </xsd:element>
+                  <xsd:element id="se5" name="HERSTELLER">
+                    <xsd:annotation>
+                      <xsd:appinfo source="emdsorch:columnname">HERSTELLER</xsd:appinfo>
+                      <xsd:appinfo source="emdsorch:dbtypename">VARCHAR</xsd:appinfo>
+                    </xsd:annotation>
+                    <xsd:simpleType>
+                      <xsd:restriction base="xsd:string">
+                        <xsd:maxLength value="10"/>
+                      </xsd:restriction>
+                    </xsd:simpleType>
+                  </xsd:element>
+                  <xsd:element id="se6" name="PREIS" type="xsd:double" xsitype="{http://www.w3.org/2001/XMLSchema}double">
+                    <xsd:annotation>
+                      <xsd:appinfo source="emdsorch:columnname">PREIS</xsd:appinfo>
+                      <xsd:appinfo source="emdsorch:dbtypename">FLOAT</xsd:appinfo>
+                    </xsd:annotation>
+                  </xsd:element>
+                  <xsd:element id="se7" name="MENGE">
+                    <xsd:annotation>
+                      <xsd:appinfo source="emdsorch:columnname">MENGE</xsd:appinfo>
+                      <xsd:appinfo source="emdsorch:dbtypename">INT</xsd:appinfo>
+                    </xsd:annotation>
+                    <xsd:simpleType>
+                      <xsd:restriction base="xsd:long">
+                        <xsd:totalDigits value="10"/>
+                      </xsd:restriction>
+                    </xsd:simpleType>
+                  </xsd:element>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+        <xsd:key id="sk8" name="artikel_PRIMARY">
+          <xsd:selector xpath="artikel"/>
+          <xsd:field xpath="ARTIKEL_ID"/>
+        </xsd:key>
+      </xsd:element>
+    </xsd:schema>
+  </source>
+
+  <target name="mt_JSON">
+    <xsd:schema xmlns:tns="np_json" xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="np_json">
+      <xsd:element id="te1" name="mt_JSON">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element id="te2" name="artikel_ID" type="xsd:string" xsitype="{http://www.w3.org/2001/XMLSchema}string"/>
+            <xsd:element id="te3" name="artikel_name" type="xsd:string" xsitype="{http://www.w3.org/2001/XMLSchema}string"/>
+            <xsd:element id="te4" name="hersteller" type="xsd:string" xsitype="{http://www.w3.org/2001/XMLSchema}string"/>
+            <xsd:element id="te5" name="preis" type="xsd:string" xsitype="{http://www.w3.org/2001/XMLSchema}string"/>
+            <xsd:element id="te6" name="menge" type="xsd:string" xsitype="{http://www.w3.org/2001/XMLSchema}string"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+  </target>
+
+    <model>
+
+      <rootMapping>
+        <map destAttr="te2" sourceAttr="se3"/>
+        <map destAttr="te3" sourceAttr="se4"/>
+        <map destAttr="te4" sourceAttr="se5"/>
+        <map destAttr="te5" sourceAttr="se6"/>
+        <map destAttr="te6" sourceAttr="se7"/>
+      </rootMapping>
+
+    </model>
+
+    <graph>
+      <typetree side="left" xpos="20" ypos="20"/>
+      <typetree side="right" xpos="857" ypos="97"/>
+    </graph>
+
+  </mapping>

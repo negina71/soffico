@@ -1,0 +1,259 @@
+<emds.epi.decl.modell.RestServiceConfig id="1">
+  <name>REST_ArtikelWebService</name>
+  <description></description>
+  <processSenarioID>337ac2f3-75cf-42a0-8f5b-e4e7ec04b5d2</processSenarioID>
+  <ID>38</ID>
+  <revisionNumber>1656591636240</revisionNumber>
+  <groupId>17</groupId>
+  <autoDeleteFlag>false</autoDeleteFlag>
+  <importRevision>0</importRevision>
+  <resources id="2">
+    <base>/rest</base>
+    <overwriteBasePath>true</overwriteBasePath>
+    <resources id="3">
+      <emds.epi.decl.modell.wadl.Resource id="4">
+        <path>/get/articleID/{varID}</path>
+        <parameters id="5">
+          <emds.epi.decl.modell.wadl.Parameter id="6">
+            <name>varID</name>
+            <style>template</style>
+            <typename>string</typename>
+            <required>true</required>
+            <repeating>false</repeating>
+          </emds.epi.decl.modell.wadl.Parameter>
+        </parameters>
+        <methods id="7">
+          <emds.epi.decl.modell.wadl.Method id="8">
+            <name>GET</name>
+            <doc id="9">
+              <title>update &lt;entity&gt;</title>
+            </doc>
+            <request id="10">
+              <doc id="11">
+                <title></title>
+              </doc>
+              <parameters id="12">
+                <emds.epi.decl.modell.wadl.Parameter id="13">
+                  <name>Content-Type</name>
+                  <style>header</style>
+                  <typename>string</typename>
+                  <required>false</required>
+                  <repeating>false</repeating>
+                  <doc id="14">
+                    <title>MIME type of content</title>
+                  </doc>
+                </emds.epi.decl.modell.wadl.Parameter>
+                <emds.epi.decl.modell.wadl.Parameter id="15">
+                  <name>ID</name>
+                  <style>query</style>
+                  <typename>string</typename>
+                  <required>false</required>
+                  <repeating>false</repeating>
+                </emds.epi.decl.modell.wadl.Parameter>
+              </parameters>
+              <dynamicQueryParameters>false</dynamicQueryParameters>
+            </request>
+            <responses id="16">
+              <emds.epi.decl.modell.wadl.Response id="17">
+                <doc id="18">
+                  <title></title>
+                </doc>
+                <representations id="19">
+                  <emds.epi.decl.modell.wadl.Representation id="20">
+                    <mediaType>text/xml</mediaType>
+                  </emds.epi.decl.modell.wadl.Representation>
+                </representations>
+                <parameters id="21">
+                  <emds.epi.decl.modell.wadl.Parameter id="22">
+                    <name>Content-Type</name>
+                    <style>header</style>
+                    <typename>string</typename>
+                    <required>false</required>
+                    <repeating>false</repeating>
+                    <doc id="23">
+                      <title>MIME type of the content</title>
+                    </doc>
+                  </emds.epi.decl.modell.wadl.Parameter>
+                </parameters>
+              </emds.epi.decl.modell.wadl.Response>
+            </responses>
+            <serviceMapping id="24">
+              <technicalElement id="25">337ac2f3-75cf-42a0-8f5b-e4e7ec04b5d2:ProcessModell:29</technicalElement>
+              <serviceInterface id="26">337ac2f3-75cf-42a0-8f5b-e4e7ec04b5d2:ServiceInterface:46</serviceInterface>
+              <requestAssignment id="27">
+                <Assignment id="28">
+                  <targetPropertyName>input_ID</targetPropertyName>
+                  <sourceExpr id="29">
+                    <expression>ID</expression>
+                    <implementingLanguage>Java</implementingLanguage>
+                  </sourceExpr>
+                </Assignment>
+              </requestAssignment>
+              <responseAssignment id="30">
+                <Assignment id="31">
+                  <targetPropertyName>MSG</targetPropertyName>
+                  <sourceExpr id="32">
+                    <expression>output_Artikel</expression>
+                    <implementingLanguage>Java</implementingLanguage>
+                  </sourceExpr>
+                </Assignment>
+              </responseAssignment>
+              <namespaceDeclarations id="33"/>
+              <onErrorWriteResponse>false</onErrorWriteResponse>
+            </serviceMapping>
+            <asynchronous>false</asynchronous>
+            <synchronousTimeout id="34">
+              <unit>SECOND</unit>
+              <value>30</value>
+            </synchronousTimeout>
+          </emds.epi.decl.modell.wadl.Method>
+        </methods>
+      </emds.epi.decl.modell.wadl.Resource>
+      <emds.epi.decl.modell.wadl.Resource id="35">
+        <path>/get/articleName/{VarName}</path>
+        <parameters id="36">
+          <emds.epi.decl.modell.wadl.Parameter id="37">
+            <name>VarName</name>
+            <style>template</style>
+            <typename>string</typename>
+            <required>true</required>
+            <repeating>false</repeating>
+          </emds.epi.decl.modell.wadl.Parameter>
+        </parameters>
+        <methods id="38">
+          <emds.epi.decl.modell.wadl.Method id="39">
+            <name>GET</name>
+            <doc id="40">
+              <title>query &lt;entity&gt;</title>
+            </doc>
+            <request id="41">
+              <doc id="42">
+                <title></title>
+              </doc>
+              <parameters id="43">
+                <emds.epi.decl.modell.wadl.Parameter id="44">
+                  <name>name</name>
+                  <style>query</style>
+                  <typename>string</typename>
+                  <required>true</required>
+                  <repeating>false</repeating>
+                </emds.epi.decl.modell.wadl.Parameter>
+              </parameters>
+              <dynamicQueryParameters>false</dynamicQueryParameters>
+            </request>
+            <responses id="45">
+              <emds.epi.decl.modell.wadl.Response id="46">
+                <doc id="47">
+                  <title></title>
+                </doc>
+                <representations id="48">
+                  <emds.epi.decl.modell.wadl.Representation id="49">
+                    <mediaType>text/xml</mediaType>
+                  </emds.epi.decl.modell.wadl.Representation>
+                </representations>
+                <parameters id="50">
+                  <emds.epi.decl.modell.wadl.Parameter id="51">
+                    <name>Content-Type</name>
+                    <style>header</style>
+                    <typename>string</typename>
+                    <required>false</required>
+                    <repeating>false</repeating>
+                    <doc id="52">
+                      <title>MIME type of content</title>
+                    </doc>
+                  </emds.epi.decl.modell.wadl.Parameter>
+                </parameters>
+              </emds.epi.decl.modell.wadl.Response>
+            </responses>
+            <serviceMapping id="53">
+              <technicalElement id="54">337ac2f3-75cf-42a0-8f5b-e4e7ec04b5d2:ProcessModell:43</technicalElement>
+              <serviceInterface id="55">337ac2f3-75cf-42a0-8f5b-e4e7ec04b5d2:ServiceInterface:42</serviceInterface>
+              <requestAssignment id="56">
+                <Assignment id="57">
+                  <targetPropertyName>NAME</targetPropertyName>
+                  <sourceExpr id="58">
+                    <expression>name</expression>
+                    <implementingLanguage>Java</implementingLanguage>
+                  </sourceExpr>
+                </Assignment>
+              </requestAssignment>
+              <responseAssignment id="59">
+                <Assignment id="60">
+                  <targetPropertyName>MSG</targetPropertyName>
+                  <sourceExpr id="61">
+                    <expression>output_Artikel</expression>
+                    <implementingLanguage>Java</implementingLanguage>
+                  </sourceExpr>
+                </Assignment>
+              </responseAssignment>
+              <namespaceDeclarations id="62"/>
+              <onErrorWriteResponse>false</onErrorWriteResponse>
+            </serviceMapping>
+            <asynchronous>false</asynchronous>
+            <synchronousTimeout id="63">
+              <unit>SECOND</unit>
+              <value>30</value>
+            </synchronousTimeout>
+          </emds.epi.decl.modell.wadl.Method>
+        </methods>
+      </emds.epi.decl.modell.wadl.Resource>
+    </resources>
+  </resources>
+  <serializerConfigMap id="64">
+    <entry>
+      <string>out.xml</string>
+      <emds.epi.impl.adapter.stream.XMLSerializerConfig id="65">
+        <serializerTypeName>out.xml</serializerTypeName>
+        <parseMode>0</parseMode>
+        <useDoctypeFromMsgProps>false</useDoctypeFromMsgProps>
+        <insertNewlines>false</insertNewlines>
+        <writeEntityEscapes>false</writeEntityEscapes>
+        <useDefaultNamespace>false</useDefaultNamespace>
+        <writeVerboseEmptyElements>false</writeVerboseEmptyElements>
+      </emds.epi.impl.adapter.stream.XMLSerializerConfig>
+    </entry>
+    <entry>
+      <string>in.json</string>
+      <emds.epi.impl.adapter.stream.JsonDeSerializerConfig id="66">
+        <serializerTypeName>in.json</serializerTypeName>
+        <parseMode>0</parseMode>
+        <encoding>UTF-8</encoding>
+        <namespace>urn:emds:json</namespace>
+        <strict>true</strict>
+        <arrayAsContainer>false</arrayAsContainer>
+        <recursiveNames>true</recursiveNames>
+        <createNullValues>true</createNullValues>
+        <behaviour>V4.6.0</behaviour>
+        <rootElementName></rootElementName>
+        <overwriteMsgType>false</overwriteMsgType>
+        <writeXsi>false</writeXsi>
+      </emds.epi.impl.adapter.stream.JsonDeSerializerConfig>
+    </entry>
+    <entry>
+      <string>out.json</string>
+      <emds.epi.impl.adapter.stream.JsonSerializerConfig id="67">
+        <serializerTypeName>out.json</serializerTypeName>
+        <parseMode>0</parseMode>
+        <encoding>UTF-8</encoding>
+        <strict>true</strict>
+        <ident>true</ident>
+        <writeAll>true</writeAll>
+        <writeArray>false</writeArray>
+        <overwriteMsgType>false</overwriteMsgType>
+        <considerXsi>false</considerXsi>
+        <considerXsiNil>false</considerXsiNil>
+        <ignoreChildOrder>false</ignoreChildOrder>
+      </emds.epi.impl.adapter.stream.JsonSerializerConfig>
+    </entry>
+  </serializerConfigMap>
+  <forbidPlainHTTP>false</forbidPlainHTTP>
+  <useSecureSocket>false</useSecureSocket>
+  <roles id="68">
+    <emds.epi.decl.modell.NamedReference id="69">337ac2f3-75cf-42a0-8f5b-e4e7ec04b5d2:REST-Role</emds.epi.decl.modell.NamedReference>
+  </roles>
+  <authMethod>1</authMethod>
+  <checkSignersAgainstTrustStore>false</checkSignersAgainstTrustStore>
+  <allowAnonymousAccess>false</allowAnonymousAccess>
+  <checkCertifacteChain>false</checkCertifacteChain>
+  <checkCertificateValidity>false</checkCertificateValidity>
+</emds.epi.decl.modell.RestServiceConfig>

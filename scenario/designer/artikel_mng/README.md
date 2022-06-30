@@ -35,3 +35,11 @@ Error reporting via file and/or mail
 </details>
 </p>
 
+
+**The fifth exercise of orchestra**
+<p>
+<details>
+<summary>REST_API_getArtikelFromDB</summary>
+The Scenario Artikel Web Service was developed with REST_API
+</details>
+</p>
