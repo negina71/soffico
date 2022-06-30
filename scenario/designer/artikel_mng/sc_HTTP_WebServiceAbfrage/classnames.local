@@ -6,6 +6,7 @@ emds.epi.decl.modell.TestEnvironment
 emds.epi.decl.modell.XMLSchema
 emds.epi.decl.modell.process.ProcessModell
 emds.epi.decl.server.landscape.entries.FileEnvironmentEntry
+emds.epi.decl.server.landscape.entries.GlobalVariable
 emds.epi.decl.server.landscape.entries.URLData
 emds.epi.impl.adapter.database.DatabaseReaderConfig
 emds.epi.impl.adapter.file.FileOutboundConfig

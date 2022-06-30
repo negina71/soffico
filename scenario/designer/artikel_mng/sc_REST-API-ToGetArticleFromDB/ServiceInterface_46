@@ -1,0 +1,66 @@
+<emds.epi.decl.modell.ServiceInterface id="1">
+  <name>GET</name>
+  <processSenarioID>337ac2f3-75cf-42a0-8f5b-e4e7ec04b5d2</processSenarioID>
+  <ID>46</ID>
+  <revisionNumber>1656591636240</revisionNumber>
+  <groupId>11</groupId>
+  <autoDeleteFlag>true</autoDeleteFlag>
+  <importRevision>0</importRevision>
+  <exchangePattern>REQUEST_RESPONSE</exchangePattern>
+  <parameters id="2">
+    <Property id="3">
+      <name>varID</name>
+      <type class="SimpleType">string</type>
+      <usagePattern>INPUT</usagePattern>
+      <requiredOnInput>true</requiredOnInput>
+    </Property>
+    <Property id="4">
+      <name>ContentType</name>
+      <type class="SimpleType">string</type>
+      <usagePattern>INPUT</usagePattern>
+      <description>MIME type of content</description>
+      <requiredOnInput>false</requiredOnInput>
+    </Property>
+    <Property id="5">
+      <name>ID</name>
+      <type class="SimpleType">string</type>
+      <usagePattern>INPUT</usagePattern>
+      <requiredOnInput>false</requiredOnInput>
+    </Property>
+    <Property id="6">
+      <name>ContentType</name>
+      <type class="SimpleType">string</type>
+      <usagePattern>OUTPUT</usagePattern>
+      <description>MIME type of the content</description>
+      <requiredOnInput>false</requiredOnInput>
+    </Property>
+    <Property id="7">
+      <name>MSG</name>
+      <type class="ArgumentType">message</type>
+      <usagePattern>OUTPUT</usagePattern>
+      <description>HTTP response content</description>
+      <requiredOnInput>true</requiredOnInput>
+    </Property>
+    <Property id="8">
+      <name>HTTPStatusCode</name>
+      <type class="SimpleType">int</type>
+      <usagePattern>OUTPUT</usagePattern>
+      <description>Optional HTTP status code</description>
+      <requiredOnInput>false</requiredOnInput>
+    </Property>
+    <Property id="9">
+      <name>URL</name>
+      <type class="SimpleType">string</type>
+      <usagePattern>INPUT</usagePattern>
+      <description>HTTP request url</description>
+      <requiredOnInput>true</requiredOnInput>
+    </Property>
+    <Property id="10">
+      <name>REMOTEADDR</name>
+      <type class="SimpleType">string</type>
+      <usagePattern>INPUT</usagePattern>
+      <description>IP address of REST client</description>
+      <requiredOnInput>true</requiredOnInput>
+    </Property>
+  </parameters>
+</emds.epi.decl.modell.ServiceInterface>

@@ -50,13 +50,13 @@
     </model>
 
     <graph>
-      <typetree side="left" xpos="20" ypos="20"/>
-      <typetree side="right" xpos="900" ypos="20"/>
-      <loc id="e3" xloc="-1" xpos="346" yloc="-1" ypos="96"/>
+      <typetree side="left" xpos="128" ypos="19"/>
+      <typetree side="right" xpos="606" ypos="20"/>
       <loc id="e1" xloc="-1" xpos="346" yloc="-1" ypos="50"/>
+      <loc id="e4" xloc="-1" xpos="248" yloc="-1" ypos="119"/>
       <loc id="e5" xloc="-1" xpos="336" yloc="-1" ypos="142"/>
       <loc id="e2" xloc="-1" xpos="251" yloc="-1" ypos="73"/>
-      <loc id="e4" xloc="-1" xpos="248" yloc="-1" ypos="119"/>
+      <loc id="e3" xloc="-1" xpos="346" yloc="-1" ypos="96"/>
     </graph>
 
   </mapping>

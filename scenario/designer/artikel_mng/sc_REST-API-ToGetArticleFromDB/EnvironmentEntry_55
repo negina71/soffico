@@ -1,0 +1,15 @@
+<emds.epi.decl.server.landscape.entries.GlobalVariable id="1">
+  <name>gv_errorMailReceiver</name>
+  <description></description>
+  <processSenarioID>337ac2f3-75cf-42a0-8f5b-e4e7ec04b5d2</processSenarioID>
+  <ID>55</ID>
+  <revisionNumber>1656594759653</revisionNumber>
+  <groupId>9</groupId>
+  <autoDeleteFlag>false</autoDeleteFlag>
+  <importRevision>0</importRevision>
+  <entryTypeName>Global variable</entryTypeName>
+  <isOriginal>true</isOriginal>
+  <useRuntimeLink>false</useRuntimeLink>
+  <value>negin.ashrafi71@gmail.com</value>
+  <valueType>0</valueType>
+</emds.epi.decl.server.landscape.entries.GlobalVariable>

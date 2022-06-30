@@ -1,0 +1,9 @@
+# scenario properties
+# Wed Jun 29 15:07:46 CEST 2022
+UUID=337ac2f3-75cf-42a0-8f5b-e4e7ec04b5d2
+charset=ISO-8859-1
+description=
+formatVersion=106
+name=sc_REST-API-ToGetArticleFromDB
+orchestraVersion=4.8.2.5 build number 136
+scenarioType=0

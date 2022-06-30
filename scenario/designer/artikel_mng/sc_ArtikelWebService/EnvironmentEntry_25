@@ -3,7 +3,7 @@
   <description></description>
   <processSenarioID>89d50e8f-8c8a-41d5-b3f6-33b07c8e4327</processSenarioID>
   <ID>25</ID>
-  <revisionNumber>1655888302929</revisionNumber>
+  <revisionNumber>1656583673141</revisionNumber>
   <groupId>9</groupId>
   <autoDeleteFlag>false</autoDeleteFlag>
   <importRevision>0</importRevision>
@@ -12,8 +12,8 @@
   <useRuntimeLink>false</useRuntimeLink>
   <jdbcurl>jdbc:mariadb://localhost:3306/test?serverTimezone=UTC</jdbcurl>
   <jdbcdriver>org.mariadb.jdbc.Driver</jdbcdriver>
-  <user>ORCHESTRA</user>
-  <encryptedPwd>opnmHc0gDzYTymIs5pY6t5K/CabXkl9PxBSPILHiIhMIqh4=</encryptedPwd>
+  <user>_ORCHESTRA</user>
+  <encryptedPwd>vhguM5oC/IYq9QDCB+wBL/KiiBmeE22Z4y/6Ra/0JYSmK5I=</encryptedPwd>
   <schema>test</schema>
   <xadriver>emds.driver.jdbc.XANotSupported</xadriver>
   <driverScopeScenario>false</driverScopeScenario>

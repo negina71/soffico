@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+  <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:emds="http://www.emds-ag.de/namespace/" xmlns:tns="np_json" targetNamespace="np_json" elementFormDefault="qualified" emds:messageFormat="XML">
+    <xsd:element name="mt_JSON" id="e1">
+      <xsd:complexType>
+        <xsd:sequence>
+          <xsd:element name="artikel_ID" id="e2" type="xsd:string"></xsd:element>
+          <xsd:element name="artikel_name" id="e3" type="xsd:string"></xsd:element>
+          <xsd:element name="hersteller" id="e4" type="xsd:string"></xsd:element>
+          <xsd:element name="preis" id="e5" type="xsd:string"></xsd:element>
+          <xsd:element name="menge" id="e6" type="xsd:string"></xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
